@@ -1,0 +1,58 @@
+body {
+    background-color:mediumpurple;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+.header {
+    margin: 0;
+     width: 100%;
+     height: 25%;
+}
+.container {
+    background-color: #663399;
+    width:100%;
+    height:100%;
+    display: flex;
+
+}
+.header .container {
+    justify-content: space-between;
+}
+.nomeProjeto {
+    width: fit-content;
+    color: white;
+    padding-left: 3%;
+}
+.navbar {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    width: 40%;
+    padding-right: 3%;
+    gap: 3%;
+}
+.atual {
+    font-weight: 500;
+}
+.header a {
+    text-decoration: none;
+    color: white;
+}
+.banner {
+    color: white;
+    background-color: #663399;
+    height: 40%;
+    margin-top:5% ;
+    display: flex;
+}
+.convite {
+    width: 20%;
+    padding: 5%;
+}
+.img {
+    width: 80%;
+    height: 30%;
+}
