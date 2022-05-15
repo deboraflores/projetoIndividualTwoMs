@@ -97,3 +97,26 @@ li a {
 .img2 {
     width:80% ;
 }
+
+.divPrincipalMusica {
+    background-color: #663399;
+    margin-top: 5%;
+}
+.bannerMusica {
+    width: 90%;
+    height: 100%;
+    color: white;
+    margin-left: 3%;
+    padding-top: 3%;
+    display: flex;
+}
+.texto {
+    text-align: left;
+    width: 50%;
+}
+.divImagem3 {
+    width: 50%
+}
+.img3 {
+    width:80% ;
+}
