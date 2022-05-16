@@ -36,7 +36,7 @@ body {
     align-items: center;
     justify-content: space-between;
     list-style: none;
-    width: 40%;
+    width: 20%;
     padding-right: 3%;
 }
 
@@ -68,12 +68,12 @@ li a {
 .divImagem {
     width: 50%;
     height: 30%;
-    margin-right: 0;
-    flex-direction: column-reverse;
+    margin-left: 6%;
 }
 .img {
-    width: 50%;
-    height: 60%;
+    width: 40%;
+    height: 50%;
+    margin-left: 5%;
 }
 .divPrincipalModa {
     background-color: #663399;
@@ -119,4 +119,24 @@ li a {
 }
 .img3 {
     width:80% ;
+}
+
+
+.divForms {
+    width: 60%;
+    height: 70%;
+    margin-left: 5%;
+    padding:2%;
+
+}
+input {
+    width: 50%;
+    height:20%;
+    border: #663399 4px solid;
+    margin-top: 1%;
+}
+/*fazer no HTML/JS as verificações de cadastro*/
+.btnCadastro {
+    border: #663399  10px solid;
+    margin-left: 20%;
 }
