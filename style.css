@@ -16,16 +16,17 @@ body {
      height: 25%;
 }
 .container {
-    background:linear-gradient(#2D4B1A,#663399 );
+    background-color: #2D4B1A;
     width:100%;
     height:100%;
     display: flex;
     align-items: center;
+    border-bottom: #663399 4px solid;
 }
 .divLogo {
-    width: 30%;
+    width: 40%;
     height: 10%;
-    margin-top: 2%;
+    margin-top: 1%;
     padding-left: 5%;
     display: flex;
 }
