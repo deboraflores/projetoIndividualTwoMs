@@ -8,7 +8,7 @@ body {
     width: 100%;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
-    background-color:#46117b;
+    background-color:#2D4B1A;
     overflow-x: hidden;
 }
 .header {
@@ -16,19 +16,31 @@ body {
      height: 25%;
 }
 .container {
-    background:linear-gradient(#006400,#663399 );
+    background:linear-gradient(#2D4B1A,#663399 );
     width:100%;
     height:100%;
     display: flex;
-
+    align-items: center;
 }
-.header .container {
-    justify-content: space-between;
+.divLogo {
+    width: 30%;
+    height: 10%;
+    margin-top: 2%;
+    padding-left: 5%;
+    display: flex;
+}
+.logo1 {
+    width: 20%;
+    height: 30%;
+    border-radius: 30%;
 }
 .nomeProjeto {
     width: fit-content;
+    padding-left: 2%;
     color: white;
-    padding-left: 3%;
+}
+.header .container {
+    justify-content: space-between;
 }
 .navbar {
     color: white;
@@ -36,7 +48,7 @@ body {
     align-items: center;
     justify-content: space-between;
     list-style: none;
-    width: 20%;
+    width: 40%;
     padding-right: 3%;
 }
 
@@ -49,18 +61,31 @@ li a {
     margin-right: 2%;
     font-size: 18px;
 }
+.btnTrilha {
+    background-color: #2d4b1a00;
+    font-family: 'poppins';
+    font-weight: 600;
+    color: white;
+    border: none;
+    text-decoration: none;
+    padding: 1%;
+    width: 100px;
+    margin-right: 2%;
+    font-size: 18px;
+}
 
 .banner {
     color: white;
     background-color: #663399;
     width: 100%;
     height: 100vh;
+
 }
 
 .divTexto {
     width: 40%;
     height: 30%;
-    margin-left: 2%;
+    padding-left: 3%;
 }
 .titulo1 {
     font-size: 50px;
@@ -131,7 +156,8 @@ footer {
     width: 100%;
     height:20%;
     margin-top: 1%;
-    background-color: #663399;
+    background-color: #2D4B1A;
+    border-top: #663399 4px solid;
     display: flex;
 }
 .contato {
@@ -165,6 +191,18 @@ footer {
 .textoSobre {
     text-align: left;
 }
+.identidade {
+    margin-top: 1%;
+    width: 30%;
+    height: 20%;
+}
+.logo2 {
+    width: 40%;
+    height: 30%;
+    padding-left: 20%;
+    border-radius: 30px;
+}
+/*Cadastro.html*/
 
 .bannerCadastro {
     color: white;
@@ -175,45 +213,30 @@ footer {
     margin-top: 2%;
 }
 
-.divChamada {
-    
-    width: 50%;
-    height: 70%;
-    padding-left: 3%;
+.divCadastro {
+    margin-left: 20%;
+    margin-top: 0;
 }
-.divForms {
-    width: 40%;
-    height: 70%;
-    margin-left: 5%;
-    padding-top:5%;
-    padding-right: 10%;
-    padding-left: 5%;
-    padding-bottom: 3%;
 
+.img4 {
+    width: 30%;
+    height: 50%;
+    padding-left: 10%;
 }
-input {
-    font-size: 15px;
-    width: 50%;
-    height:20%;
-    border: #006400 2px solid;
-    margin-top: 1%;
-}
+
+
 /*fazer no HTML/JS as verificações de cadastro*/
 .btnCadastro {
     font-size: 20px;
     color: white;
     border: #663399 2px solid;
-    background-color: #006400;
+    background-color: #2D4B1A;
     margin-top: 2%;
     margin-left: 15%;
     width: 25%;
     height: 30%;
 }
-.img4 {
-    width: 50%;
-    height: 80%;
-    padding-left: 15%;
-}
+
 
 
 
@@ -246,14 +269,14 @@ input {
     font-size: 15px;
     width: 50%;
     height:10%;
-    border: #006400 2px solid;
+    border: #2D4B1A 2px solid;
     margin-top: 1%;
 }
-.btnLogin {
+.btnLoginCadastro {
     font-size: 20px;
     color: white;
     border: #663399 2px solid;
-    background-color: #006400;
+    background-color: #2D4B1A;
     margin-top: 2%;
     margin-left: 15%;
     width: 20%;
@@ -265,7 +288,7 @@ input {
     height: 70%;
 }
 .textoCadastro {
-    font-size: 25px;
+    font-size: 20px;
 }
 .img5 {
     width: 40%;
