@@ -8,7 +8,7 @@ body {
     width: 100%;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
-    background-color:lightgoldenrodyellow;
+    background-color:#46117b;
     overflow-x: hidden;
 }
 .header {
@@ -16,7 +16,7 @@ body {
      height: 25%;
 }
 .container {
-    background-color: #663399;
+    background:linear-gradient(#006400,#663399 );
     width:100%;
     height:100%;
     display: flex;
@@ -54,10 +54,7 @@ li a {
     color: white;
     background-color: #663399;
     width: 100%;
-    height: 100%;
-    margin-top: 2%;
-    display: flex;
-    align-self: center;
+    height: 100vh;
 }
 
 .divTexto {
@@ -65,18 +62,25 @@ li a {
     height: 30%;
     margin-left: 2%;
 }
+.titulo1 {
+    font-size: 50px;
+    padding-top:3% ;
+}
+h3 {
+    padding-left: 3%;
+}
 .divImagem {
     width: 60%;
     height: 40%;
-    margin-left: 6%;
+    display: flex;
 }
 .img {
-    width: 40%;
-    height: 50%;
+    width: 40vw;
+    height: 40vh;
 }
 .divPrincipalModa {
     background-color: #663399;
-    margin-top: 2%;
+    margin-top: 1%;
 }
 .bannerModa {
     width: 90%;
@@ -95,12 +99,12 @@ li a {
 }
 .img2 {
     width:80% ;
-    margin-left: 10%;
+    margin-left: 15%;
 }
 
 .divPrincipalMusica {
     background-color: #663399;
-    margin-top: 2%;
+    margin-top: 1%;
 }
 .bannerMusica {
     width: 90%;
@@ -119,21 +123,21 @@ li a {
 }
 .img3 {
     width:80% ;
-    padding-left: 10%;
+    padding-left: 15%;
 }
 
 footer {
     color: white;
     width: 100%;
-    height:50%;
-    margin-top: 2%;
+    height:20%;
+    margin-top: 1%;
     background-color: #663399;
     display: flex;
 }
 .contato {
-    width: 40%;
-    height: 30%;
-    margin-top: 3%;
+    width: 35%;
+    height:20%;
+    margin-top: 1%;
     margin-left: 3%;
 }
 .textoContato {
@@ -147,19 +151,28 @@ footer {
     margin: 5%;
 }
 .icones {
-    width: 12%;
+    width: 5%;
     border-radius: 15%;
     padding-left: 2%;
 }
 
 .sobreMim {
     width: 60%;
-    height: 30%;
-    margin-top: 3%;
+    height: 20%;
+    margin-top: 1%;
     margin-left: 3%;
 }
 .textoSobre {
     text-align: left;
+}
+
+.bannerCadastro {
+    color: white;
+    background-color: #663399;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-top: 2%;
 }
 
 .divChamada {
@@ -197,7 +210,7 @@ input {
     height: 30%;
 }
 .img4 {
-    width: 40%;
+    width: 50%;
     height: 80%;
     padding-left: 15%;
 }
@@ -213,16 +226,42 @@ input {
     height: 100%;
     margin-top: 2%;
     display: flex;
+    align-items: center;
 
+}
+.divLogin {
+    margin-left: 20%;
+    margin-top: 0;
+}
+.imgForms {
+    display: flex;
 }
 .divFormsLogin {
     width: 40%;
     height: 70%;
-    padding-left: 5%;
-    padding-top: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
-.divChamadaLogin {
-    width: 45%;
+.inLogin {
+    font-size: 15px;
+    width: 50%;
+    height:10%;
+    border: #006400 2px solid;
+    margin-top: 1%;
+}
+.btnLogin {
+    font-size: 20px;
+    color: white;
+    border: #663399 2px solid;
+    background-color: #006400;
+    margin-top: 2%;
+    margin-left: 15%;
+    width: 20%;
+    height: 10%;
+}
+
+.divLogin {
+    width: 70%;
     height: 70%;
 }
 .textoCadastro {
@@ -231,5 +270,4 @@ input {
 .img5 {
     width: 40%;
     height: 80%;
-    padding-left: 20%;
 }
