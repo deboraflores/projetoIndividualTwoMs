@@ -20,6 +20,10 @@
                     <button class="btnTrilha" onclick="tocar()">Trilha Sonora</button>
                     <audio src="" id="theclimb" preload></audio>
                 </li>
+                <li onclick="inicio()">Home</li>
+                <li onclick="post()">Publicações</li>
+                <li onclick="enq()">Enquetes</li>
+
                 <li>
                     <a href="index.html">Inicial</a>
                 </li>
@@ -28,8 +32,8 @@
         </div>
     </div>
 
-    <div class="bannerInteracoes">
-        <div class="divOpcoes" style="display:block;">
+    <div class="bannerInteracoes" id="bannerInteracoes" style="display: block ;">
+        <div class="divOpcoes" id="divOp" style="display:block;">
             <img class="imgOpcoes" onclick="post()" id="imgOp" src="imagens\Publicações.png">
             <img class="imgOpcoes" onclick="enq()" id="imgOp" src="imagens\enquetes.png">
         </div>
@@ -42,7 +46,7 @@
             </div>
             <img class="imgPost"src="imagens\Blog post-amico.svg" alt="">
         </div>
-    </div>
+    
 
     <div class="bannerEnq">
         <div class="divEnq" id="divEnqResultado" style="display:none;">
@@ -54,17 +58,21 @@
             </div>
         </div>
     </div>
-
+</div>
 </body>
 </html>
 <script>
+    function inicio() {
+        bannerInteracoes.style.display = 'block'
+    }
     function post() {
-        imgPost.style.display = 'none'
-        imgEnq.style.display = 'none'
+        divOp.style.display = 'none'
         divPostsResultado.style.display = 'block'
+        divEnqResultado.style.display = 'none'
 }
     function enq() {
-    divPostsResultado.style.display = 'none'
-    divEnqResultado.style.display = 'block'
+        divOp.style.display = 'none'
+        divPostsResultado.style.display = 'none'
+        divEnqResultado.style.display = 'block'
 }
 </script>
