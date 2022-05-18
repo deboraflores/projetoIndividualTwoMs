@@ -1,4 +1,4 @@
 function tocar () {
-    const audio = document.getElementById('theclimb');
-    audio.play();
+    const iframe = document.getElementById('theclimb');
+    iframe.play();
 }
