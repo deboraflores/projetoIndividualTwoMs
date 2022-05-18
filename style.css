@@ -322,6 +322,58 @@ footer {
 }
 .btnOpcoes {
     background-color: #663399;
-    width: 15%;
+    width: 25%;
     height: 10%;
+    margin-top: 3%;
+}
+.divPosts {
+    background-color: #663399;
+    width: 65%;
+    height: 70vh;
+    margin-left: 18%;
+    margin-bottom: 5%;
+}
+.tituloPosts {
+    color: white;
+    font-weight: 600;
+    padding-left: 3%;
+}
+.textoPosts {
+    color: white;
+    padding-left: 3%;
+}
+.textareaPost {
+    width: 55%;
+    height: 40vh;
+    margin-left: 3%;
+    font-size: 15px;
+    padding:1%;
+    border: #2D4B1A 4px solid;
+
+}
+.btnPublicar {
+    width: 20%;
+    height: 10%;
+    margin-left: 20%;
+    background-color: #2D4B1A;
+    color: white;
+    font-weight: 600;
+    border: #663399 2px solid;
+}
+
+.bannerEnq {
+    width: 100%;
+    height: 100%;
+}
+.divEnq { 
+    background-color: #663399;
+    width: 65%;
+    height: 70vh;
+    margin-left: 18%;
+    margin-bottom: 5%; ;
+}
+.tituloEnq {
+    color: white;
+    font-weight: 600;
+    padding-left: 3%;
 }
