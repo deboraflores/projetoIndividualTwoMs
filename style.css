@@ -82,7 +82,9 @@ li a {
     height: 100vh;
 
 }
-
+.textoImgHome {
+    display: block;
+}
 .divTexto {
     width: 40%;
     height: 30%;
@@ -104,6 +106,18 @@ h3 {
     width: 40vw;
     height: 40vh;
 }
+.divSongsHome {
+    width: 40%;
+}
+.songsHome {
+    width: 40%;
+    padding-top: 3%;
+    padding-left: 5%;
+}
+
+
+
+/*SOBRE MODA E SOBRE MÚSICA*/
 .divPrincipalModa {
     background-color: #663399;
     margin-top: 1%;
@@ -350,7 +364,7 @@ footer {
     padding-left: 3%;
 }
 .textareaPost {
-    width: 85%;
+    width: 60%;
     height: 40vh;
     margin-left: 3%;
     font-size: 15px;
@@ -359,9 +373,9 @@ footer {
 
 }
 .btnPublicar {
-    width: 40%;
+    width: 30%;
     height: 10%;
-    margin-left: 25%;
+    margin-left: 10%;
     background-color: #2D4B1A;
     color: white;
     font-size: 20px;
@@ -369,9 +383,9 @@ footer {
     border: #663399 2px solid;
 }
 .imgPost {
-    padding-top:15%;
-    width: 40%;
-    height: 50%;
+   padding-left: 50%;
+    width: 30vw;
+    height: 50vh;
 }
 .bannerEnq {
     width: 100%;
@@ -381,9 +395,10 @@ footer {
     background-color: #663399;
     width: 65%;
     height: 70vh;
+    margin-top: 1%;
     margin-left: 18%;
-    margin-top: 3%;
     margin-bottom: 5%;
+    display: flex;
 }
 .tituloEnq {
     color: white;
@@ -392,22 +407,37 @@ footer {
 }
 .enq1 {
     background-color:antiquewhite ;
-    width: 30%;
+    width: 70%;
     margin-left: 3%;
-    border-radius: 5%;
+    display: flex;
+}
+.imgPerguntaEnq1 {
+    flex-direction: column;
 }
 .imgEnq1 {
-    width: 90%;
-    height: 40vh;
+    width: 40%;
+    height: 35vh;
     padding-top: 2%;
     padding-left: 3%;
     border-radius: 5%;
 }
 .perguntaEnq1 {
-    width: 100%;
-    height: 10%;
+    width: 50%;
+    height: 5%;
     font-size: 15px;
     padding-left: 1%;
+    margin-top: 3%;
+}
+.opcoesEnq1 {
+    margin-left: 5%;
+    padding-top: 3%;
+    display: flex;
+    flex-direction: column;
+}
+.songs {
+    width: 40%;
+    flex-direction: column;
+    
 }
 .selEnq1 {
     margin-top: 30%;

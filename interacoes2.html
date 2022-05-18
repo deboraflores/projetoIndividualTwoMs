@@ -20,19 +20,16 @@
                     <button class="btnTrilha" onclick="tocar()">Trilha Sonora</button>
                     <audio src="" id="theclimb" preload></audio>
                 </li>
-                <li onclick="inicio()">Home</li>
+                <li onclick="inicial()">Inicial</li>
                 <li onclick="post()">Publicações</li>
                 <li onclick="enq()">Enquetes</li>
-
-                <li>
-                    <a href="index.html">Inicial</a>
-                </li>
+                <li></li>
                
             </ul>
         </div>
     </div>
 
-    <div class="bannerInteracoes" id="bannerInteracoes" style="display: block ;">
+    <div class="bannerInteracoes" id="bannerInt" >
         <div class="divOpcoes" id="divOp" style="display:block;">
             <img class="imgOpcoes" onclick="post()" id="imgOp" src="imagens\Publicações.png">
             <img class="imgOpcoes" onclick="enq()" id="imgOp" src="imagens\enquetes.png">
@@ -44,7 +41,6 @@
                 <textarea placeholder="Escreva aqui" rows="10" cols="30"class="textareaPost"></textarea> <br>
                 <button class="btnPublicar">Publicar</button>
             </div>
-            <img class="imgPost"src="imagens\Blog post-amico.svg" alt="">
         </div>
     
 
@@ -52,9 +48,13 @@
         <div class="divEnq" id="divEnqResultado" style="display:none;">
             <h2 class="tituloEnq">Enquetes</h2>
             <div class="enq1">
-                <img class="imgEnq1"src="https://static.stealthelook.com.br/wp-content/uploads/2021/12/oito-looks-estilosos-para-a-sua-confraternizacao-do-trabalho-1-20211213162314.png" alt="">
+                <div class="imgPerguntaEnq1"></div>
                 <h4 class="perguntaEnq1">Qual seria o seu mood musical com esse look?</h4>
-
+                <img class="imgEnq1"src="https://static.stealthelook.com.br/wp-content/uploads/2021/12/oito-looks-estilosos-para-a-sua-confraternizacao-do-trabalho-1-20211213162314.png" alt="">
+                <div class="opcoesEnq1">
+                <iframe class="songs"style="border-radius:12px" src="https://open.spotify.com/embed/track/5YqltLsjdqFtvqE7Nrysvs?utm_source=generator&theme=0" width="40%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"> We are Never Ever Getting Back Together - Taylor Swift</iframe> <h4>We are Never Ever Getting Back Together - Taylor Swift</h4>
+                <iframe class="songs"style="border-radius:12px" src="https://open.spotify.com/embed/track/3X01VeoR0GckfiXlFRrJmF?utm_source=generator&theme=0" width="40%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> <h4>Home - Gabrielle Aplin</h4>
+                </div>
             </div>
         </div>
     </div>
@@ -62,8 +62,10 @@
 </body>
 </html>
 <script>
-    function inicio() {
-        bannerInteracoes.style.display = 'block'
+    function inicial() {
+        divOp.style.display = 'block'
+        divPostsResultado.style.display = 'none'
+        divEnqResultado.style.display = 'none'
     }
     function post() {
         divOp.style.display = 'none'
