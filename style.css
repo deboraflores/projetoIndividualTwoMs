@@ -317,33 +317,40 @@ footer {
     width: 30%;
     height: 40%;
     padding-left: 3%;
+    display: flex;
     align-items: center;
 
 }
-.btnOpcoes {
+.imgOpcoes {
     background-color: #663399;
-    width: 25%;
-    height: 10%;
-    margin-top: 3%;
+    width: 200px;
+    height: 200px;
+    margin-top: 5%;
+    margin-left: 5%;
 }
 .divPosts {
     background-color: #663399;
     width: 65%;
     height: 70vh;
+    margin-top: 1%;
     margin-left: 18%;
     margin-bottom: 5%;
+    display: flex;
 }
 .tituloPosts {
     color: white;
     font-weight: 600;
     padding-left: 3%;
+    width: fit-content;
+    height: 5%;
 }
 .textoPosts {
+    width: 100%;
     color: white;
     padding-left: 3%;
 }
 .textareaPost {
-    width: 55%;
+    width: 85%;
     height: 40vh;
     margin-left: 3%;
     font-size: 15px;
@@ -352,15 +359,20 @@ footer {
 
 }
 .btnPublicar {
-    width: 20%;
+    width: 40%;
     height: 10%;
-    margin-left: 20%;
+    margin-left: 25%;
     background-color: #2D4B1A;
     color: white;
+    font-size: 20px;
     font-weight: 600;
     border: #663399 2px solid;
 }
-
+.imgPost {
+    padding-top:15%;
+    width: 40%;
+    height: 50%;
+}
 .bannerEnq {
     width: 100%;
     height: 100%;
@@ -370,10 +382,40 @@ footer {
     width: 65%;
     height: 70vh;
     margin-left: 18%;
-    margin-bottom: 5%; ;
+    margin-top: 3%;
+    margin-bottom: 5%;
 }
 .tituloEnq {
     color: white;
     font-weight: 600;
     padding-left: 3%;
+}
+.enq1 {
+    background-color:antiquewhite ;
+    width: 30%;
+    margin-left: 3%;
+    border-radius: 5%;
+}
+.imgEnq1 {
+    width: 90%;
+    height: 40vh;
+    padding-top: 2%;
+    padding-left: 3%;
+    border-radius: 5%;
+}
+.perguntaEnq1 {
+    width: 100%;
+    height: 10%;
+    font-size: 15px;
+    padding-left: 1%;
+}
+.selEnq1 {
+    margin-top: 30%;
+    margin-right: 50%;
+    width: 60%;
+    height: 8%;
+}
+.capasEnq {
+    width: 40%;
+
 }

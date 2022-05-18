@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TwoM's - Comunidade</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="function.js">
 </head>
 <body>
     <div class="header">
@@ -28,27 +29,42 @@
     </div>
 
     <div class="bannerInteracoes">
-        <div class="divOpcoes">
-            <button class="btnOpcoes">Publicações</button>
-            <button class="btnOpcoes">Enquetes</button>
-            <button class="btnOpcoes">Métricas</button>
+        <div class="divOpcoes" style="display:block;">
+            <img class="imgOpcoes" onclick="post()" id="imgOp" src="imagens\Publicações.png">
+            <img class="imgOpcoes" onclick="enq()" id="imgOp" src="imagens\enquetes.png">
         </div>
-        <div class="divPosts">
-            <h2 class="tituloPosts">Publicações</h2>
+        <div class="divPosts" style="display:none;" id="divPostsResultado">
             <div clas="divInput">
+                <h2 class="tituloPosts">Publicações</h2>
                 <h4 class="textoPosts">Compartilhe opiniões sobre looks e músicas, experiências e dicas!</h4>
                 <textarea placeholder="Escreva aqui" rows="10" cols="30"class="textareaPost"></textarea> <br>
                 <button class="btnPublicar">Publicar</button>
             </div>
+            <img class="imgPost"src="imagens\Blog post-amico.svg" alt="">
         </div>
     </div>
 
     <div class="bannerEnq">
-        <div class="divEnq">
+        <div class="divEnq" id="divEnqResultado" style="display:none;">
             <h2 class="tituloEnq">Enquetes</h2>
-            
+            <div class="enq1">
+                <img class="imgEnq1"src="https://static.stealthelook.com.br/wp-content/uploads/2021/12/oito-looks-estilosos-para-a-sua-confraternizacao-do-trabalho-1-20211213162314.png" alt="">
+                <h4 class="perguntaEnq1">Qual seria o seu mood musical com esse look?</h4>
+
+            </div>
         </div>
     </div>
 
 </body>
 </html>
+<script>
+    function post() {
+        imgPost.style.display = 'none'
+        imgEnq.style.display = 'none'
+        divPostsResultado.style.display = 'block'
+}
+    function enq() {
+    divPostsResultado.style.display = 'none'
+    divEnqResultado.style.display = 'block'
+}
+</script>
