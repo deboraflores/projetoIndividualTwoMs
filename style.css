@@ -43,13 +43,13 @@ body {
 .header .container {
     justify-content: space-between;
 }
-.navbar {
+.navbarHome {
     color: white;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     list-style: none;
-    width: 40%;
+    width: 20%;
     padding-right: 3%;
 }
 
@@ -57,19 +57,6 @@ li a {
     text-decoration: none;
     font-weight: 600;
     color: white;
-    padding: 1%;
-    width: 100px;
-    margin-right: 2%;
-    font-size: 18px;
-}
-.btnTrilha {
-    background-color: #2d4b1a00;
-    font-family: 'poppins';
-    font-weight: 600;
-    color: white;
-    border: none;
-    text-decoration: none;
-    padding: 1%;
     width: 100px;
     margin-right: 2%;
     font-size: 18px;
@@ -82,37 +69,39 @@ li a {
     height: 100vh;
 
 }
-.textoImgHome {
-    display: block;
+.bannerPrincipal {
+    width: 100%;
+    height: 100vh;
+    display: flex;
 }
-.divTexto {
-    width: 40%;
-    height: 30%;
-    padding-left: 3%;
+.textoImgHome {
+    width: 50%;
 }
 .titulo1 {
     font-size: 50px;
-    padding-top:3% ;
+    padding-left: 3%;
 }
 h3 {
     padding-left: 3%;
 }
 .divImagem {
-    width: 60%;
+    width: 50%;
     height: 40%;
+    padding-left: 10%;
     display: flex;
 }
 .img {
     width: 40vw;
     height: 40vh;
+    padding-right: 5%;
 }
 .divSongsHome {
-    width: 40%;
+    padding-top: 10%;
+    padding-left: 20%;
+    width: 30%;
 }
 .songsHome {
-    width: 40%;
-    padding-top: 3%;
-    padding-left: 5%;
+    width: 70%;
 }
 
 
@@ -309,6 +298,15 @@ footer {
 
 
 /*INTERACOES.HTML*/
+.navbar2 {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    width: 40%;
+    padding-right: 3%;
+}
 .bannerInteracoes {
     width: 100%;
     height: 100%;
@@ -370,6 +368,7 @@ footer {
     font-size: 15px;
     padding:1%;
     border: #2D4B1A 4px solid;
+    resize: none;
 
 }
 .btnPublicar {
@@ -407,25 +406,26 @@ footer {
 }
 .enq1 {
     background-color:antiquewhite ;
-    width: 70%;
-    margin-left: 3%;
+    width: 85%;
+    height: 60vh;
+    margin-left: 5%;
     display: flex;
 }
 .imgPerguntaEnq1 {
+    display: flex;
     flex-direction: column;
 }
 .imgEnq1 {
-    width: 40%;
-    height: 35vh;
-    padding-top: 2%;
-    padding-left: 3%;
-    border-radius: 5%;
+    width: 55%;
+    height: 40vh;
+    padding-top: 10%;
+    padding-left: 25%;
 }
 .perguntaEnq1 {
-    width: 50%;
+    width: 100%;
     height: 5%;
-    font-size: 15px;
-    padding-left: 1%;
+    font-size: 20px;
+    padding-left: 2%;
     margin-top: 3%;
 }
 .opcoesEnq1 {
@@ -439,15 +439,8 @@ footer {
     flex-direction: column;
     
 }
-.selEnq1 {
-    margin-top: 30%;
-    margin-right: 50%;
-    width: 60%;
-    height: 8%;
-}
-.capasEnq {
-    width: 40%;
-
+.musica1 {
+    border: #2D4B1A 10px;
 }
 li {
     font-weight: 600;
