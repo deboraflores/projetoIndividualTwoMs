@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TwoM's - Cadastro </title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="../js/funcoes.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="divLogo">
+                <img class="logo1" src="./assets/imgs/logotipo.png" alt="">
+                <h1 class="nomeProjeto">TwoM's</h1>
+            </div>
+            <ul class="navbarHome">
+                <li>
+                    <a href="index.html">Inicial</a>
+                </li>
+                <li>
+                    <a href="cadastro.html">Cadastro</a>
+                </li>
+                <li>
+                    <a href="login.html">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="bannerLogin">
+        <span id="mensagem_erro"></span>
+        <div class="divLogin">
+            <h2 class="titulo4">Faça seu cadastro! </h2> 
+            <h3>Interaja em nossa comunidade através de enquetes, curiosidades e muito mais!</h3>
+            <div class="imgForms">
+                <img class="img5"src="./assets/imgs/Sign up-cuate.svg" alt="">
+                <div class="divFormsLogin">
+                    <span class="textoCadastro">Usuário:</span> <br>
+                    <input class="inLogin"placeholder="Seu nome de usuário" type="text" id="nome_input"> <br>
+                    <span class="textoCadastro">Email:</span> <br>
+                    <input class="inLogin" placeholder="Seu email" type="text" id="email_input"> <br>
+                    <span class="textoCadastro">Senha:</span> <br>
+                    <input class="inLogin"placeholder="Sua senha" type="password" id="senha_input"> <br>
+                    <span class="textoCadastro">Confirme sua senha:</span> <br>
+                    <input class="inLogin" placeholder="Confirme sua senha" type="password" id="confirmacao_senha_input"> <br>
+                    <button class="btnLoginCadastro"onclick="cadastrar()">Cadastrar</button> <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function cadastrar() {
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeVar = nome_input.value;
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+        var confirmacaoSenhaVar = confirmacao_senha_input.value;
+
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+
+            return false;
+        }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+                setTimeout(() => {
+                    window.location = "login.html";
+                }, "2000")
+                
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+
+        return false;
+    }
+
+
+</script>
