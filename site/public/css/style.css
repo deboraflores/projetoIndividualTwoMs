@@ -529,16 +529,13 @@ li {
     padding: 20px;
   }
   
-  .publicacao > *:not(:last-child) {
-    padding: 0 0 10px 0;
-  }
-  
+
   .div-results {
     width: 100%;
   }
   
   .div-results .feed-container {
-    background-color: #212124;
+    background-color: #663399;
     border-radius: 5px;
     margin-bottom: 80px;
   }
