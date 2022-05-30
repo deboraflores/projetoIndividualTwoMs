@@ -399,13 +399,13 @@ footer {
     height: 100%;
 }
 .divEnq { 
-    background-color: #663399;
-    width: 65%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
     height: 70vh;
     margin-top: 1%;
-    margin-left: 18%;
     margin-bottom: 5%;
-    display: flex;
+    
 }
 .tituloEnq {
     color: white;
@@ -413,43 +413,61 @@ footer {
     padding-left: 3%;
 }
 .enq1 {
-    background-color:antiquewhite ;
-    width: 85%;
+    color: white;
+    width: 30%;
     height: 60vh;
     margin-left: 5%;
-    display: flex;
+    border:#663399 3px ridge;
 }
 .imgPerguntaEnq1 {
     display: flex;
     flex-direction: column;
 }
 .imgEnq1 {
-    width: 55%;
-    height: 40vh;
-    padding-top: 10%;
-    padding-left: 25%;
+    height: 50vh;
+    width: 60%;
+    padding-top: 1%;
+    padding-left: 10%;
 }
 .perguntaEnq1 {
     width: 100%;
     height: 5%;
-    font-size: 20px;
+    font-size: 15px;
     padding-left: 2%;
-    margin-top: 3%;
+    margin-top: 2%;
 }
 .opcoesEnq1 {
-    margin-left: 5%;
-    padding-top: 3%;
+    width: 100%;
+    margin-top: 3%;
+    border: #663399 3px ridge;
     display: flex;
     flex-direction: column;
 }
 .songs {
-    width: 40%;
+    padding: 5%;
+    width: 70%;
     flex-direction: column;
     
 }
 .musica1 {
-    padding: 3%;
+    display: flex;
+    flex-direction: column;
     border: #2D4B1A 4px;
+}
+.nomeMusica {
+    padding-left: 5%;
+    margin-top: 0;
+    width: 40%;
+    font-size: 15px;
+}
+.btnSelecionar {
+    width: 25%;
+    height: 30%;
+    margin-left: 3%;
+    color: white;
+    border: #2D4B1A 2px solid;
+    background-color: #663399;
+    margin-top: 2%;
 }
 li {
     font-weight: 600;

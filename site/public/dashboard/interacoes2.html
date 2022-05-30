@@ -19,11 +19,11 @@
                 <li onclick="post()">Publicações</li>
                 <li onclick="enq()">Enquetes</li>
                 <li>
-                <select style="display: block" class="selConta" id="">
+                <select style="display: block" class="selConta" id="" onchange="sair()">
                     <option class="optConta" value="">Conta</option>
                     <option class="optConta" value="">Perfil</option>
                     <option class="optConta" value="">Configurações</option>
-                    <option class="optConta" value="">Sair</option>
+                    <option class="optConta" value="4">Sair</option>
                 </select> <!-- ver como colocarei função no 'sair' para voltar para a home principal-->
                 </li>
                
@@ -61,26 +61,35 @@
             <h2 class="tituloEnq">Enquetes</h2>
             <div class="enq1">
                 <div class="imgPerguntaEnq1">
-                <h4 class="perguntaEnq1">Qual seria o seu mood musical com esse look?</h4>
-                <img class="imgEnq1"src="https://static.stealthelook.com.br/wp-content/uploads/2021/12/oito-looks-estilosos-para-a-sua-confraternizacao-do-trabalho-1-20211213162314.png" alt="">
+                    <h4 class="perguntaEnq1">Qual seria o seu mood musical com esse look?</h4>
+                    <img class="imgEnq1"src="https://static.stealthelook.com.br/wp-content/uploads/2021/12/oito-looks-estilosos-para-a-sua-confraternizacao-do-trabalho-1-20211213162314.png" alt="">
                 </div>
                 <div class="opcoesEnq1">
-                <div class="musica1">
-                    <iframe class="songs"style="border-radius:12px" src="https://open.spotify.com/embed/track/5YqltLsjdqFtvqE7Nrysvs?utm_source=generator&theme=0" width="40%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"> We are Never Ever Getting Back Together - Taylor Swift</iframe> 
-                    <h4>We are Never Ever Getting Back Together - Taylor Swift</h4>
+                    <div class="musica1">
+                        <iframe class="songs"style="border-radius:12px" src="https://open.spotify.com/embed/track/5YqltLsjdqFtvqE7Nrysvs?utm_source=generator&theme=0" width="40%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"> We are Never Ever Getting Back Together - Taylor Swift</iframe> 
+                        <h4 class="nomeMusica">We are Never Ever Getting Back Together - Taylor Swift</h4> 
+                        <button class="btnSelecionar" onclick="selecionar(1,1)">Selecionar</button>
+                    </div>
+                    <div class="musica1">
+                        <iframe class="songs"style="border-radius:12px" src="https://open.spotify.com/embed/track/3X01VeoR0GckfiXlFRrJmF?utm_source=generator&theme=0" width="40%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> 
+                        <h4 class="nomeMusica">Home - Gabrielle Aplin</h4>
+                        <button class="btnSelecionar" onclick="selecionar(1,2)">Selecionar</button>
+                    </div>
                 </div>
-                <div class="musica2">
-                    <iframe class="songs"style="border-radius:12px" src="https://open.spotify.com/embed/track/3X01VeoR0GckfiXlFRrJmF?utm_source=generator&theme=0" width="40%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> 
-                    <h4>Home - Gabrielle Aplin</h4>
-                </div>
-            </div>
-            </div>
+            </div> -->
+            
+            
         </div>
     </div>
 </div>
+
 </body>
 </html>
+
 <script>
+    function sair() {
+        window.location = "../index.html"; 
+    }
     function inicial() {
         divOp.style.display = 'block'
         divPostsResultado.style.display = 'none'
@@ -96,6 +105,10 @@
         divPostsResultado.style.display = 'none'
         divEnqResultado.style.display = 'block'
 }
+
+    function selecionar(pergunta,resposta) {
+        alert (`Na pergunta ${pergunta}, você respondeu ${resposta}.`)
+    }
 </script>
 <script>
     function publicar() {
