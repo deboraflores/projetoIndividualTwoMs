@@ -45,7 +45,7 @@
                     <input class="inLogin"placeholder="Sua senha" type="password" id="senha_input"> <br>
                     <span class="textoCadastro">Confirme sua senha:</span> <br>
                     <input class="inLogin" placeholder="Confirme sua senha" type="password" id="confirmacao_senha_input"> <br>
-                    <button class="btnLoginCadastro"onclick="cadastrar()">Cadastrar</button> <br>
+                    <button class="btnCadastro"onclick="cadastrar()">Cadastrar</button> <br>
                 </div>
             </div>
         </div>
@@ -86,7 +86,7 @@
             console.log("resposta: ", resposta);
 
             if (resposta.ok) {
-                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Vamos logar!";
                 setTimeout(() => {
                     window.location = "login.html";
                 }, "2000")
