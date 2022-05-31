@@ -400,12 +400,12 @@ footer {
     display: flex;
 }
 #divEnqResultado { 
-    display: flex;
-    flex-direction: row;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     margin-top: 1%;
     margin-bottom: 5%;
+    display: inline-block;
+
     
 }
 .tituloEnq {
@@ -414,10 +414,11 @@ footer {
     padding-left: 3%;
 }
 .enq1 {
+    display: inline-block;
     color: white;
     width: 30%;
     height: 60vh;
-    margin-left: 5%;
+    margin-left: 2%;
     border:#663399 3px ridge;
 }
 .imgPerguntaEnq1 {
@@ -462,19 +463,26 @@ footer {
     font-size: 15px;
 }
 .btnSelecionar {
-    width: 25%;
+    width: fit-content;
     height: 30%;
     margin-left: 3%;
     color: white;
     border: #2D4B1A 2px solid;
+    border-radius: 30%;
     background-color: #663399;
     margin-top: 2%;
 }
+.btnSelecionar:hover {
+    background-color: white;
+    color: #663399;
+    transition:all 1s ease-in 
+}
 .enq2 {
+    display: inline-block;
     color: white;
     width: 30%;
     height: 60vh;
-    margin-left: 5%;
+    margin-left: 2%;
     border:#663399 3px ridge;
 }
 .imgPerguntaEnq2 {
