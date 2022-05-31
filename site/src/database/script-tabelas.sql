@@ -17,3 +17,10 @@ fkUsuario int,
 	foreign key (fkUsuario) references usuario(idUsuario)
 );
 select * from aviso;
+
+create table enquetes (
+idEnq int primary key auto_increment,
+pergunta varchar(60),
+resp1 char(1),
+resp2 char(1)
+);

@@ -40,6 +40,12 @@ body {
     padding-left: 2%;
     color: white;
 }
+.nomeProjeto:hover {
+    transition:all 2s ease-in; 
+    color: #663399;
+    font-size: 40px;
+    font-weight: 800;
+}
 .header .container {
     justify-content: space-between;
 }
@@ -180,6 +186,7 @@ footer {
     font-weight: 800;
     margin: 5%;
 }
+
 .icones {
     width: 5%;
     border-radius: 15%;
@@ -238,13 +245,13 @@ footer {
 /*fazer no HTML/JS as verificações de cadastro*/
 .btnCadastro {
     font-size: 20px;
-    color: white;
     border: #663399 2px solid;
     background-color: #2D4B1A;
     margin-top: 2%;
     margin-left: 10%;
-    width: 35%;
+    width: fit-content;
     height: 30%;
+    color: white;
 }
 
 /*login.html*/
@@ -404,9 +411,7 @@ footer {
     height: 100%;
     margin-top: 1%;
     margin-bottom: 5%;
-    display: inline-block;
-
-    
+    display: inline-block;    
 }
 .tituloEnq {
     color: white;
@@ -530,98 +535,10 @@ li {
     font-weight: 600;
 }
 
-/*css dos dashboards*/
-.dash-right .avisos {
-    width: 100%;
-    /* border: 3px solid pink; */
-    color: rgb(216, 216, 216);
-    font-family: "Exo 2", sans-serif;
-  }
-  
-  .dash-right .avisos .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .dash-right .avisos .container .div-form {
-    width: 100%;
-  }
-  
-  .dash-right .avisos .container .div-form #form_postagem {
-    width: 100%;
-  }
-  
-  .dash-right .avisos .div-form label {
-    width: 100%;
-  }
-  
-  .dash-right .avisos .div-form input {
-    width: 100%;
-    border-radius: 5px;
-  }
-  
-  .dash-right .avisos .div-form textarea {
-    width: 100%;
-    /* color: #E6005A; */
-    border: 3px solid #e6005a;
-    background-color: white;
-    border-radius: 5px;
-  }
-  
-  .dash-right .avisos .div-form button {
-    cursor: pointer;
-    font-family: "Exo 2", sans-serif;
-    border: 0;
-    border-radius: 5px;
-    font-weight: 600;
-    font-size: 18px;
-    padding: 10px 15px;
-    color: white;
-    background-color: #e6005a;
-    width: 120px;
-  }
-  
-  .publicacao-btn-editar {
-    cursor: pointer;
-    font-family: "Exo 2", sans-serif;
-    border: 0;
-    border-radius: 5px;
-    font-weight: 600;
-    font-size: 14px;
-    padding: 5px 8px;
-    color: white;
-    background-color: #e6005a;
-    width: 80px;
-  }
-  
-  .publicacao {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: stretch;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
-    border-bottom: 3px solid #e6005a;
-    padding: 20px;
-  }
-  
-
-  .div-results {
-    width: 100%;
-  }
-  
-  .div-results .feed-container {
-    background-color: #663399;
-    border-radius: 5px;
-    margin-bottom: 80px;
-  }
-  
-  .div-buttons {
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  .div-buttons > {
-    margin-left: 30px;
-  }
+.divEnq2 {
+    width: 100vw;
+    height: 100%;
+    margin-top: 1%;
+    margin-bottom: 5%;
+    display: inline-block; 
+}

@@ -19,10 +19,10 @@
                 <li onclick="post()">Publicações</li>
                 <li onclick="enq()">Enquetes</li>
                 <li>
-                <select style="display: block" class="selConta" id="" onchange="sair()">
-                    <option class="optConta" value="">Conta</option>
-                    <option class="optConta" value="">Perfil</option>
-                    <option class="optConta" value="">Configurações</option>
+                <select style="display: block" class="selConta" id="selConta1" onchange="sair()">
+                    <option class="optConta" value="1">Conta</option>
+                    <option class="optConta" value="2">Perfil</option>
+                    <option class="optConta" value="3">Configurações</option>
                     <option class="optConta" value="4">Sair</option>
                 </select> <!-- ver como colocarei função no 'sair' para voltar para a home principal-->
                 </li>
@@ -59,6 +59,7 @@
     <div class="bannerEnq">
         <div class="divEnq" id="divEnqResultado" style="display:none;">
             <h2 class="tituloEnq">Enquetes</h2>
+            
             <div class="enq1">
                 <div class="imgPerguntaEnq1">
                     <h4 class="perguntaEnq1">Qual seria o seu mood musical com esse look?</h4>
@@ -66,7 +67,7 @@
                 </div>
                 <div class="opcoesEnq1">
                     <div class="musica1">
-                        <iframe class="songs"style="border-radius:12px" src="https://open.spotify.com/embed/track/5YqltLsjdqFtvqE7Nrysvs?utm_source=generator&theme=0" width="40%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"> We are Never Ever Getting Back Together - Taylor Swift</iframe> 
+                        <iframe class="songs"style="border-radius:12px" src="https://open.spotify.com/embed/track/5YqltLsjdqFtvqE7Nrysvs?utm_source=generator&theme=0" width="40%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> 
                         <h4 class="nomeMusica">We are Never Ever Getting Back Together - Taylor Swift</h4> 
                         <button class="btnSelecionar" onclick="selecionar(1,1)">Selecionar</button>
                     </div>
@@ -80,24 +81,44 @@
             
             <div class="enq2">
                 <div class="imgPerguntaEnq2">
-                    <h4 class="perguntaEnq2">Qual seria o seu mood musical com esse look?</h4>
-                    <img class="imgEnq2"src="https://static.stealthelook.com.br/wp-content/uploads/2021/12/oito-looks-estilosos-para-a-sua-confraternizacao-do-trabalho-1-20211213162314.png" alt="">
+                    <h4 class="perguntaEnq2">Qual música você acha que ele estaria ouvindo no metrô?</h4>
+                    <img class="imgEnq2"src="https://lilianpacce.s3.amazonaws.com/wp-content/uploads/2017/03/310317-estilosos-no-metro-07.jpg" alt="">
                 </div>
                 <div class="opcoesEnq2">
                     <div class="musica2">
-                        <iframe class="songs2"style="border-radius:12px" src="https://open.spotify.com/embed/track/5YqltLsjdqFtvqE7Nrysvs?utm_source=generator&theme=0" width="40%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"> We are Never Ever Getting Back Together - Taylor Swift</iframe> 
-                        <h4 class="nomeMusica2">We are Never Ever Getting Back Together - Taylor Swift</h4> 
-                        <button class="btnSelecionar" onclick="selecionar(1,1)">Selecionar</button>
+                        <iframe class="songs2" style="border-radius:12px" src="https://open.spotify.com/embed/track/4JiEyzf0Md7KEFFGWDDdCr?utm_source=generator&theme=0" width="40%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> 
+                        <h4 class="nomeMusica2">Knockin' on Heaven's Door - Guns N' Roses</h4> 
+                        <button class="btnSelecionar" onclick="selecionar(2,1)">Selecionar</button>
                     </div>
                     <div class="musica2">
-                        <iframe class="songs2"style="border-radius:12px" src="https://open.spotify.com/embed/track/3X01VeoR0GckfiXlFRrJmF?utm_source=generator&theme=0" width="40%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> 
-                        <h4 class="nomeMusica2">Home - Gabrielle Aplin</h4>
-                        <button class="btnSelecionar" onclick="selecionar(1,2)">Selecionar</button>
+                        <iframe class="songs2"<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3TYHjkemsiUrkyQcoPYW7g?utm_source=generator&theme=0" width="40%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> 
+                        <h4 class="nomeMusica2"> Velha Infância - Trabalhistas </h4>
+                        <button class="btnSelecionar" onclick="selecionar(2,2)">Selecionar</button>
                     </div>
                 </div>
             </div>
 
             <div class="enq2">
+                <div class="imgPerguntaEnq2">
+                    <h4 class="perguntaEnq2">O que estaria no seu fone, caso você estivesse: </h4>
+                    <img class="imgEnq2"src="https://th.bing.com/th/id/R.42f12fc8596788bff0184183794bac74?rik=AOq5GKqafOhCBg&riu=http%3a%2f%2fquadrofeminino.com%2fwp-content%2fuploads%2f2017%2f06%2fLooks-estilosos-vestido-xadrez.jpg&ehk=esUPYelamG3T4UyuOOBcQG2PeLFXJ8F8zK0gfMO7chs%3d&risl=&pid=ImgRaw&r=0" alt="">
+                </div>
+                <div class="opcoesEnq2">
+                    <div class="musica2">
+                        <iframe class="songs2" style="border-radius:12px" src="https://open.spotify.com/embed/track/4RVwu0g32PAqgUiJoXsdF8?utm_source=generator&theme=0" width="40%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                        <h4 class="nomeMusica2">Happier Than Ever - Billie Eilish</h4> 
+                        <button class="btnSelecionar" onclick="selecionar(3,1)">Selecionar</button>
+                    </div>
+                    <div class="musica2">
+                        <iframe class="songs2" style="border-radius:12px" src="https://open.spotify.com/embed/track/73CMRj62VK8nUS4ezD2wvi?utm_source=generator&theme=0" width="40%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> 
+                        <h4 class="nomeMusica2">Set Fire to the Rain - Adele</h4>
+                        <button class="btnSelecionar" onclick="selecionar(3,2)">Selecionar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="divEnqParte2">
+                <div class="enq2">
                 <div class="imgPerguntaEnq2">
                     <h4 class="perguntaEnq2">Qual seria o seu mood musical com esse look?</h4>
                     <img class="imgEnq2"src="https://static.stealthelook.com.br/wp-content/uploads/2021/12/oito-looks-estilosos-para-a-sua-confraternizacao-do-trabalho-1-20211213162314.png" alt="">
@@ -134,27 +155,9 @@
                         <button class="btnSelecionar" onclick="selecionar(1,2)">Selecionar</button>
                     </div>
                 </div>
-            </div>
-
-
-            <div class="enq2">
-                <div class="imgPerguntaEnq2">
-                    <h4 class="perguntaEnq2">Qual seria o seu mood musical com esse look?</h4>
-                    <img class="imgEnq2"src="https://static.stealthelook.com.br/wp-content/uploads/2021/12/oito-looks-estilosos-para-a-sua-confraternizacao-do-trabalho-1-20211213162314.png" alt="">
-                </div>
-                <div class="opcoesEnq2">
-                    <div class="musica2">
-                        <iframe class="songs2"style="border-radius:12px" src="https://open.spotify.com/embed/track/5YqltLsjdqFtvqE7Nrysvs?utm_source=generator&theme=0" width="40%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"> We are Never Ever Getting Back Together - Taylor Swift</iframe> 
-                        <h4 class="nomeMusica2">We are Never Ever Getting Back Together - Taylor Swift</h4> 
-                        <button class="btnSelecionar" onclick="selecionar(1,1)">Selecionar</button>
-                    </div>
-                    <div class="musica2">
-                        <iframe class="songs2"style="border-radius:12px" src="https://open.spotify.com/embed/track/3X01VeoR0GckfiXlFRrJmF?utm_source=generator&theme=0" width="40%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> 
-                        <h4 class="nomeMusica2">Home - Gabrielle Aplin</h4>
-                        <button class="btnSelecionar" onclick="selecionar(1,2)">Selecionar</button>
-                    </div>
-                </div>
-            </div>
+            </div> 
+            </div> -->
+           
         </div>
     </div>
 </div>
@@ -164,7 +167,11 @@
 
 <script>
     function sair() {
-        window.location = "../index.html"; 
+        window.location = "../index.html";
+        
+        sessionStorage.EMAIL_USUARIO = '';
+        sessionStorage.NOME_USUARIO = '';
+        sessionStorage.ID_USUARIO = '';
     }
     function inicial() {
         divOp.style.display = 'block'
@@ -184,8 +191,13 @@
 
     function selecionar(pergunta,resposta) {
         alert (`Na pergunta ${pergunta}, você respondeu ${resposta}.`)
-    }
+
+        sessionStorage.ID_USUARIO = json.idUsuario;
+        sessionStorage.RESPOSTA =   json.resposta;
+}
+
 </script>
+
 <script>
     function publicar() {
             var idUsuario = sessionStorage.ID_USUARIO;
@@ -331,4 +343,170 @@
         }
     
     </script>
+
+<script>
+
+    let proximaAtualizacao;
+  
+    window.onload = obterDadosGrafico(1);
+
+  
+    // O gráfico é construído com três funções:
+    // 1. obterDadosGrafico -> Traz dados do Banco de Dados para montar o gráfico da primeira vez
+    // 2. plotarGrafico -> Monta o gráfico com os dados trazidos e exibe em tela
+    // 3. atualizarGrafico -> Atualiza o gráfico, trazendo novamente dados do Banco
+  
+    // Esta função *obterDadosGrafico* busca os últimos dados inseridos em tabela de medidas.
+    // para, quando carregar o gráfico da primeira vez, já trazer com vários dados.
+    // A função *obterDadosGrafico* também invoca a função *plotarGrafico*
+  
+    //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
+    //     Para ajustar o "select", ajuste o comando sql em src/models
+    function obterDadosGrafico(idEnq) {
+  
+        if (proximaAtualizacao != undefined) {
+            clearTimeout(proximaAtualizacao);
+        }
+  
+        fetch(`/enquetes/resposta/${idEnq}`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    resposta.reverse();
+  
+                    plotarGrafico(resposta, idEnq);
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+    }
+  
+    // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
+    // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
+    // A função *plotarGrafico* também invoca a função *atualizarGrafico*
+    function plotarGrafico(resposta, idEnq) {
+        console.log('iniciando plotagem do gráfico...');
+  
+        var dados = {
+            labels: [],
+            datasets: [
+                {
+                    yAxisID: 'Enquete 1',
+                    label: 'Resposta',
+                    borderColor: '#663399',
+                    backgroundColor: '#ffffff',
+                    fill: true,
+                    data: []
+                },
+                {
+                    yAxisID: 'y-temperatura',
+                    label: 'Temperatura',
+                    borderColor: '#FFF',
+                    backgroundColor: '#32b9cd8f',
+                    fill: true,
+                    data: []
+                }
+            ]
+        };
+  
+        for (i = 0; i < resposta.length; i++) {
+            var registro = resposta[i];
+            dados.labels.push(registro.momento_grafico);
+            dados.datasets[0].data.push(registro.umidade);
+            dados.datasets[1].data.push(registro.temperatura);
+        }
+  
+        console.log(JSON.stringify(dados));
+  
+        var ctx = canvas_grafico.getContext('2d');
+        window.grafico_linha = Chart.Line(ctx, {
+            data: dados,
+            options: {
+                responsive: true,
+                animation: { duration: 500 },
+                hoverMode: 'index',
+                stacked: false,
+                title: {
+                    display: false,
+                    text: 'Dados capturados'
+                },
+                scales: {
+                    yAxes: [{
+                        type: 'linear',
+                        display: true,
+                        position: 'left',
+                        id: 'y-temperatura',
+                        ticks: {
+                            beginAtZero: true,
+                            max: 100,
+                            min: 0
+                        }
+                    }, {
+                        type: 'linear',
+                        display: false,
+                        position: 'right',
+                        id: 'y-umidade',
+                        ticks: {
+                            beginAtZero: true,
+                            max: 100,
+                            min: 0
+                        },
+  
+                        gridLines: {
+                            drawOnChartArea: false,
+                        },
+                    }],
+                }
+            }
+        });
+  
+        setTimeout(() => atualizarGrafico(idAquario, dados), 2000);
+    }
+  
+  
+    // Esta função *atualizarGrafico* atualiza o gráfico que foi renderizado na página,
+    // buscando a última medida inserida em tabela contendo as capturas, 
+  
+    //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
+    //     Para ajustar o "select", ajuste o comando sql em src/models
+    function atualizarGrafico(idAquario, dados) {
+  
+        fetch(`/medidas/tempo-real/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (novoRegistro) {
+  
+                    console.log(`Dados recebidos: ${JSON.stringify(novoRegistro)}`);
+                    console.log(`Dados atuais do gráfico: ${dados}`);
+  
+                    // tirando e colocando valores no gráfico
+                    dados.labels.shift(); // apagar o primeiro
+                    dados.labels.push(novoRegistro[0].momento_grafico); // incluir um novo momento
+                    
+                    dados.datasets[0].data.shift();  // apagar o primeiro de umidade
+                    dados.datasets[0].data.push(novoRegistro[0].umidade); // incluir uma nova medida de umidade
+                    
+                    dados.datasets[1].data.shift();  // apagar o primeiro de temperatura
+                    dados.datasets[1].data.push(novoRegistro[0].temperatura); // incluir uma nova medida de temperatura
+  
+                    window.grafico_linha.update();
+  
+                    // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
+                    proximaAtualizacao = setTimeout(() => atualizarGrafico(idAquario, dados), 2000);
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+                // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
+                proximaAtualizacao = setTimeout(() => atualizarGrafico(idAquario, dados), 2000);
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+  
+    }
+  </script>
     
