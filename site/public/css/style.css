@@ -397,12 +397,13 @@ footer {
 .bannerEnq {
     width: 100%;
     height: 100%;
+    display: flex;
 }
-.divEnq { 
+#divEnqResultado { 
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 70vh;
+    height: 100%;
     margin-top: 1%;
     margin-bottom: 5%;
     
@@ -468,6 +469,54 @@ footer {
     border: #2D4B1A 2px solid;
     background-color: #663399;
     margin-top: 2%;
+}
+.enq2 {
+    color: white;
+    width: 30%;
+    height: 60vh;
+    margin-left: 5%;
+    border:#663399 3px ridge;
+}
+.imgPerguntaEnq2 {
+    display: flex;
+    flex-direction: column;
+}
+.imgEnq2 {
+    height: 50vh;
+    width: 60%;
+    padding-top: 1%;
+    padding-left: 10%;
+}
+.perguntaEnq2 {
+    width: 100%;
+    height: 5%;
+    font-size: 15px;
+    padding-left: 2%;
+    margin-top: 2%;
+}
+.opcoesEnq2 {
+    width: 100%;
+    margin-top: 3%;
+    border: #663399 3px ridge;
+    display: flex;
+    flex-direction: column;
+}
+.songs2 {
+    padding: 5%;
+    width: 70%;
+    flex-direction: column;
+    
+}
+.musica2 {
+    display: flex;
+    flex-direction: column;
+    border: #2D4B1A 4px;
+}
+.nomeMusica2 {
+    padding-left: 5%;
+    margin-top: 0;
+    width: 40%;
+    font-size: 15px;
 }
 li {
     font-weight: 600;
