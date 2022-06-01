@@ -36,10 +36,10 @@
             <img class="imgOpcoes" onclick="post()" id="imgOp" src="../assets/imgs/Publicações.png">
             <img class="imgOpcoes" onclick="enq()" id="imgOp" src="../assets/imgs/enquetes.png">
         </div>
+        
         <div class="divPosts" style="display:none;" id="divPostsResultado">
             <h2 class="tituloPosts">Publicações</h2>
             <h4 class="textoPosts">Compartilhe opiniões sobre looks e músicas, experiências e dicas!</h4>
-            <div clas="divInput">
                 <form id="form_postagem" method="post" onsubmit="return publicar()">
                     <label>
                         <textarea placeholder="Escreva aqui (máximo de 250 caracteres)." name="descricao" id="textarea_descricao" class="textareaPost" maxlength="250" rows="5"></textarea>
@@ -47,13 +47,14 @@
                     <br>
                     <button class="btnPublicar">Publicar</button>
                 </form>  
-            </div>
-        <h2 class="tituloPosts">Publicações antigas</h2>
-                    <div class="div-results">
-                        <div id="feed_container" class="feed-container">
-                        </div>
+        
+        <div class="divPostsAntigos">        
+            <h2 class="tituloPosts">Publicações antigas</h2>
+                <div class="divResultado">
+                    <div id="feedContainer" class="feedContainer">
                     </div>
                 </div>
+        </div>
     </div>
 
     <div class="bannerEnq">
@@ -91,7 +92,7 @@
                         <button class="btnSelecionar" onclick="selecionar(2,1)">Selecionar</button>
                     </div>
                     <div class="musica2">
-                        <iframe class="songs2"<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3TYHjkemsiUrkyQcoPYW7g?utm_source=generator&theme=0" width="40%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> 
+                        <iframe class="songs2 style="border-radius:12px" src="https://open.spotify.com/embed/track/3TYHjkemsiUrkyQcoPYW7g?utm_source=generator&theme=0" width="40%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> 
                         <h4 class="nomeMusica2"> Velha Infância - Trabalhistas </h4>
                         <button class="btnSelecionar" onclick="selecionar(2,2)">Selecionar</button>
                     </div>

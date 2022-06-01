@@ -394,10 +394,16 @@ footer {
     font-weight: 600;
     border: #663399 2px solid;
 }
-.imgPost {
-   padding-left: 50%;
-    width: 30vw;
-    height: 50vh;
+.divPostsAntigos {
+    background-color: #663399;
+    width: 100%;
+    height: 70vh;
+    margin-top: 13%;
+    margin-bottom: 5%;
+    display: flex;
+}
+.divResultado {
+    
 }
 
 /*ENQUETES*/
