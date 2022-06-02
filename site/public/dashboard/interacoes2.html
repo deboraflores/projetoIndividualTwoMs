@@ -142,7 +142,7 @@
 
             <div class="enq2">
                 <div class="imgPerguntaEnq2">
-                    <h4 class="perguntaEnq2">Pra você, esse skatista escutaria o quê?</h4>
+                    <h4 class="perguntaEnq2">Para você, o que esse skatista estaria escutando?</h4>
                     <img class="imgEnq2"src="https://i.pinimg.com/originals/5d/9f/ab/5d9fab322142308e9926353252367bd4.jpg" alt="">
                 </div>
                 <div class="opcoesEnq2">
@@ -164,7 +164,7 @@
 
     <div class="bannerResults" id="divResults" style="display: none;">
         <h2 class="tituloResults">Resultados</h2>
-        <h4 class="textoResults"> Já participou das nossas enquetes? Acompanhe aqui os votos da nossa Comunidade. </h4>
+        <h4 class="textoResults"> &nbsp; Já participou das nossas enquetes? Acompanhe aqui os votos da nossa Comunidade. </h4>
 
         <div class="divGraficos">
             <div class="grafico1">
@@ -179,10 +179,16 @@
                 <canvas id="grafico1">
                 </canvas>  
               </div>
-              <div class="grafico1">
+        </div>
+        <div class="divGraficos2">
+            <div class="grafico2">
                 <canvas id="grafico1">
                 </canvas>  
-              </div>
+            </div>
+            <div class="grafico2">
+                <canvas id="grafico1">
+                </canvas>  
+            </div>
         </div>
     </div>
 </div>
@@ -202,6 +208,7 @@
         divOp.style.display = 'block'
         divPostsResultado.style.display = 'none'
         bannerEnq.style.display = 'none'
+        divResults.style.display = 'none'
     }
     function post() {
         divOp.style.display = 'none'
