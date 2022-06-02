@@ -11,13 +11,14 @@
     <div class="header">
         <div class="container">
             <div class="divLogo">
-                <img class="logo1" src="../assets/imgs/logotipo.png" alt="">
+                <img class="logo1" src="../assets/imgs/logotipo.png" alt="" onclick="location.href='../index.html'">
                 <h1 class="nomeProjeto">TwoM's</h1>
             </div>
             <ul class="navbar2">     
                 <li onclick="inicial()">Inicial</li>
                 <li onclick="post()">Publicações</li>
                 <li onclick="enq()">Enquetes</li>
+                <li onclick="result()">Resultados</li>
                 <li>
                 <select style="display: block" class="selConta" id="selConta1" onchange="sair()">
                     <option class="optConta" value="1">Conta</option>
@@ -35,6 +36,7 @@
         <div class="divOpcoes" id="divOp" style="display:block;">
             <img class="imgOpcoes" onclick="post()" id="imgOp" src="../assets/imgs/Publicações.png">
             <img class="imgOpcoes" onclick="enq()" id="imgOp" src="../assets/imgs/enquetes.png">
+            <img class="imgOpcoes" onclick="result()" src="../assets/imgs/resultados.png" alt="">
         </div>
         
         <div class="divPosts" style="display:none;" id="divPostsResultado">
@@ -57,8 +59,8 @@
         </div>
     </div>
 
-    <div class="bannerEnq">
-        <div class="divEnq" id="divEnqResultado" style="display:none;">
+    <div class="bannerEnq" id="bannerEnq" style="display:none;">
+        <div class="divEnq" id="divEnqResultado" >
             <h2 class="tituloEnq">Enquetes</h2>
             
             <div class="enq1">
@@ -82,7 +84,7 @@
             
             <div class="enq2">
                 <div class="imgPerguntaEnq2">
-                    <h4 class="perguntaEnq2">Qual música você acha que ele estaria ouvindo no metrô?</h4>
+                    <h4 class="perguntaEnq2">Qual música ele estaria ouvindo no metrô?</h4>
                     <img class="imgEnq2"src="https://lilianpacce.s3.amazonaws.com/wp-content/uploads/2017/03/310317-estilosos-no-metro-07.jpg" alt="">
                 </div>
                 <div class="opcoesEnq2">
@@ -118,22 +120,21 @@
                 </div>
             </div>
 
-            <!-- <div class="divEnqParte2">
                 <div class="enq2">
                 <div class="imgPerguntaEnq2">
-                    <h4 class="perguntaEnq2">Qual seria o seu mood musical com esse look?</h4>
-                    <img class="imgEnq2"src="https://static.stealthelook.com.br/wp-content/uploads/2021/12/oito-looks-estilosos-para-a-sua-confraternizacao-do-trabalho-1-20211213162314.png" alt="">
+                    <h4 class="perguntaEnq2">Qual a música ideal para esse look de primavera?</h4>
+                    <img class="imgEnq2"src="https://i.pinimg.com/736x/60/ed/c3/60edc321984bef7db4a410116cafd9bf.jpg" alt="">
                 </div>
                 <div class="opcoesEnq2">
                     <div class="musica2">
-                        <iframe class="songs2"style="border-radius:12px" src="https://open.spotify.com/embed/track/5YqltLsjdqFtvqE7Nrysvs?utm_source=generator&theme=0" width="40%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"> We are Never Ever Getting Back Together - Taylor Swift</iframe> 
-                        <h4 class="nomeMusica2">We are Never Ever Getting Back Together - Taylor Swift</h4> 
-                        <button class="btnSelecionar" onclick="selecionar(1,1)">Selecionar</button>
+                        <iframe class="songs2"style="border-radius:12px" src="https://open.spotify.com/embed/track/5QUoiOFWAaV5VC2VbBhHJ4?utm_source=generator&theme=0" width="40%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                        <h4 class="nomeMusica2">A Cor é Rosa - Silva </h4> 
+                        <button class="btnSelecionar" onclick="selecionar(4,1)">Selecionar</button>
                     </div>
                     <div class="musica2">
-                        <iframe class="songs2"style="border-radius:12px" src="https://open.spotify.com/embed/track/3X01VeoR0GckfiXlFRrJmF?utm_source=generator&theme=0" width="40%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> 
-                        <h4 class="nomeMusica2">Home - Gabrielle Aplin</h4>
-                        <button class="btnSelecionar" onclick="selecionar(1,2)">Selecionar</button>
+                        <iframe class="songs2"style="border-radius:12px" src="https://open.spotify.com/embed/track/6Jkm5kUldvIqxzI1Pa7nXH?utm_source=generator&theme=0" width="40%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                        <h4 class="nomeMusica2">10 Things I Hate About You - Leah Kate</h4>
+                        <button class="btnSelecionar" onclick="selecionar(4,2)">Selecionar</button>
                     </div>
                 </div>
             </div>
@@ -141,24 +142,47 @@
 
             <div class="enq2">
                 <div class="imgPerguntaEnq2">
-                    <h4 class="perguntaEnq2">Qual seria o seu mood musical com esse look?</h4>
-                    <img class="imgEnq2"src="https://static.stealthelook.com.br/wp-content/uploads/2021/12/oito-looks-estilosos-para-a-sua-confraternizacao-do-trabalho-1-20211213162314.png" alt="">
+                    <h4 class="perguntaEnq2">Pra você, esse skatista escutaria o quê?</h4>
+                    <img class="imgEnq2"src="https://i.pinimg.com/originals/5d/9f/ab/5d9fab322142308e9926353252367bd4.jpg" alt="">
                 </div>
                 <div class="opcoesEnq2">
                     <div class="musica2">
-                        <iframe class="songs2"style="border-radius:12px" src="https://open.spotify.com/embed/track/5YqltLsjdqFtvqE7Nrysvs?utm_source=generator&theme=0" width="40%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"> We are Never Ever Getting Back Together - Taylor Swift</iframe> 
-                        <h4 class="nomeMusica2">We are Never Ever Getting Back Together - Taylor Swift</h4> 
-                        <button class="btnSelecionar" onclick="selecionar(1,1)">Selecionar</button>
+                        <iframe class="songs2"style="border-radius:12px" src="https://open.spotify.com/embed/track/67iXtoPnynomfHLEtcTC18?utm_source=generator&theme=0" width="40%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                        <h4 class="nomeMusica2">Amor Incendiário - Yago Oproprio</h4> 
+                        <button class="btnSelecionar" onclick="selecionar(5,1)">Selecionar</button>
                     </div>
                     <div class="musica2">
-                        <iframe class="songs2"style="border-radius:12px" src="https://open.spotify.com/embed/track/3X01VeoR0GckfiXlFRrJmF?utm_source=generator&theme=0" width="40%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> 
-                        <h4 class="nomeMusica2">Home - Gabrielle Aplin</h4>
-                        <button class="btnSelecionar" onclick="selecionar(1,2)">Selecionar</button>
+                        <iframe class="songs2" style="border-radius:12px" src="https://open.spotify.com/embed/track/2oaK4JLVnmRGIO9ytBE1bt?utm_source=generator&theme=0" width="40%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                        <h4 class="nomeMusica2">Dark Necessities - Red Hot Chili Peppers</h4>
+                        <button class="btnSelecionar" onclick="selecionar(5,2)">Selecionar</button>
                     </div>
                 </div>
-            </div> 
             </div> -->
            
+        </div>
+    </div>
+
+    <div class="bannerResults" id="divResults" style="display: none;">
+        <h2 class="tituloResults">Resultados</h2>
+        <h4 class="textoResults"> Já participou das nossas enquetes? Acompanhe aqui os votos da nossa Comunidade. </h4>
+
+        <div class="divGraficos">
+            <div class="grafico1">
+              <canvas id="grafico1">
+              </canvas>  
+            </div>
+            <div class="grafico1">
+                <canvas id="grafico1">
+                </canvas>  
+              </div>
+              <div class="grafico1">
+                <canvas id="grafico1">
+                </canvas>  
+              </div>
+              <div class="grafico1">
+                <canvas id="grafico1">
+                </canvas>  
+              </div>
         </div>
     </div>
 </div>
@@ -177,18 +201,26 @@
     function inicial() {
         divOp.style.display = 'block'
         divPostsResultado.style.display = 'none'
-        divEnqResultado.style.display = 'none'
+        bannerEnq.style.display = 'none'
     }
     function post() {
         divOp.style.display = 'none'
         divPostsResultado.style.display = 'block'
-        divEnqResultado.style.display = 'none'
+        bannerEnq.style.display = 'none'
+        divResults.style.display = 'none'
 }
     function enq() {
         divOp.style.display = 'none'
         divPostsResultado.style.display = 'none'
-        divEnqResultado.style.display = 'block'
+        bannerEnq.style.display = 'block'
+        divResults.style.display = 'none'
 }
+    function result() {
+        divOp.style.display = 'none'
+        divPostsResultado.style.display = 'none'
+        bannerEnq.style.display = 'none'
+        divResults.style.display = 'block'
+    }
 
     function selecionar(pergunta,resposta) {
         alert (`Na pergunta ${pergunta}, você respondeu ${resposta}.`)
