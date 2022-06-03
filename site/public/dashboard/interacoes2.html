@@ -20,13 +20,14 @@
                 <li onclick="enq()">Enquetes</li>
                 <li onclick="result()">Resultados</li>
                 <li>
-                <select style="display: block" class="selConta" id="selConta1" onchange="sair()">
-                    <option class="optConta" value="1">Conta</option>
-                    <option class="optConta" value="2">Perfil</option>
-                    <option class="optConta" value="3">Configurações</option>
-                    <option class="optConta" value="4">Sair</option>
+                <select style="display: block" class="selConta" id="selConta1">
+                    <option class="optConta" value="../dashboard/interacoes2.html">Conta</option>                     
+                    <option class="optConta" value="../dashboard/interacoes2.html">Perfil</option>
+                    <option class="optConta" value="../dashboard/interacoes2.html">Configurações</option>
+                    <option class="optConta" value="../index.html">Sair</option>
                 </select> <!-- ver como colocarei função no 'sair' para voltar para a home principal-->
                 </li>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
                
             </ul>
         </div>
@@ -197,13 +198,23 @@
 </html>
 
 <script>
+    $(document).ready(function() {
+        $('#selConta1').on('change',function() {
+            var url = $(this).val();
+            if(url) {
+                window.open(url,'blank');
+            }
+            return false;
+        });
+    
+    });
     function sair() {
         window.location = "../index.html";
         
         sessionStorage.EMAIL_USUARIO = '';
         sessionStorage.NOME_USUARIO = '';
         sessionStorage.ID_USUARIO = '';
-    }
+        }
     function inicial() {
         divOp.style.display = 'block'
         divPostsResultado.style.display = 'none'

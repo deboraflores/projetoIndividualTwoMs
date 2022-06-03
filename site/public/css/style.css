@@ -125,13 +125,14 @@ h3 {
     margin-top:10%;
     margin-left: 8%;
     padding-top: 1%;
-    padding-left: 5%;
+    padding-left: 2%;
+    padding-bottom: 2%;
     width: 25%;
     height: 35vh;
     border: #2D4B1A 3px solid;
 }
 .songsHome {
-    width: 100%;
+    width: 80%;
 }
 
 
@@ -480,7 +481,7 @@ li:hover {
 .enq1 {
     display: flex;
     color: white;
-    border:#2D4B1A 8px ridge;
+    border: #663399 8px ridge;
     background-color: #663399;
     width: 65%;
     height: 70vh;
@@ -553,7 +554,7 @@ li:hover {
 .enq2 {
     display: flex;
     color: white;
-    border:#2D4B1A 8px ridge;
+    border:#663399 8px ridge;
     background-color: #663399;
     width: 65%;
     height: 70vh;
