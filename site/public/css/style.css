@@ -205,6 +205,10 @@ footer {
     margin-top: 1%;
     margin-left: 3%;
 }
+.tituloContato:hover {
+    color: antiquewhite;
+    text-decoration: dashed;
+}
 .textoContato {
     font-size: 20px;
     margin-left: 5%;
@@ -214,6 +218,10 @@ footer {
     font-size: 15px;
     font-weight: 800;
     margin: 5%;
+}
+.textoFooter:hover {
+    color: antiquewhite;
+    text-decoration: dashed;
 }
 
 .icones {
@@ -299,7 +307,7 @@ footer {
     margin-top: 2%;
     display: flex;
     align-items: center;
-
+    
 }
 .divLogin {
     margin-left: 20%;
