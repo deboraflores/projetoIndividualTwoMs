@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="./assets/icon/fav.png">
 </head>
+
 <body>
     <div class="header">
         <div class="container">
@@ -15,225 +17,268 @@
                 <img class="logo1" src="../assets/imgs/logotipo.png" alt="" onclick="location.href='../index.html'">
                 <h1 class="nomeProjeto">TwoM's</h1>
             </div>
-            <ul class="navbar2">     
+            <ul class="navbar2">
                 <li onclick="inicial()">Inicial</li>
                 <li onclick="post()">Publicações</li>
                 <li onclick="enq()">Enquetes</li>
                 <li onclick="result()">Resultados</li>
                 <li>
-                <select style="display: block" class="selConta" id="selConta1">
-                    <option class="optConta" value="../dashboard/interacoes2.html">Conta</option>                     
-                    <option class="optConta" value="../dashboard/interacoes2.html">Perfil</option>
-                    <option class="optConta" value="../dashboard/interacoes2.html">Configurações</option>
-                    <option class="optConta" value="../index.html">Sair</option>
-                </select> <!-- ver como colocarei função no 'sair' para voltar para a home principal-->
+                    <select style="display: block" class="selConta" id="selConta1">
+                        <option class="optConta" value="../dashboard/interacoes2.html">Conta</option>
+                        <option class="optConta" value="../dashboard/interacoes2.html">Perfil</option>
+                        <option class="optConta" value="../dashboard/interacoes2.html">Configurações</option>
+                        <option class="optConta" value="../index.html">Sair</option>
+                    </select> <!-- ver como colocarei função no 'sair' para voltar para a home principal-->
                 </li>
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-               
+
             </ul>
         </div>
     </div>
 
-    <div class="bannerInteracoes" id="bannerInt" >
+    <div class="bannerInteracoes" id="bannerInt">
         <div class="divOpcoes" id="divOp" style="display:block;">
             <img class="imgOpcoes" onclick="post()" id="imgOp" src="../assets/imgs/Publicações.png">
             <img class="imgOpcoes" onclick="enq()" id="imgOp" src="../assets/imgs/enquetes.png">
             <img class="imgOpcoes" onclick="result()" src="../assets/imgs/resultados.png" alt="">
         </div>
-        
+
         <div class="divPosts" style="display:none;" id="divPostsResultado">
             <h2 class="tituloPosts">Publicações</h2>
             <h4 class="textoPosts">Compartilhe opiniões sobre looks e músicas, experiências e dicas!</h4>
-                <form id="form_postagem" method="post" onsubmit="return publicar()">
-                    <label>
-                        <textarea placeholder="Escreva aqui (máximo de 250 caracteres)." name="descricao" id="textarea_descricao" class="textareaPost" maxlength="250" rows="5"></textarea>
-                    </label>
-                    <br>
-                    <button class="btnPublicar">Publicar</button>
-                </form>  
-        
-        <div class="divPostsAntigos">        
-            <h2 class="tituloPosts">Publicações antigas</h2>
-                <div class="divResultado">
-                    <div id="feedContainer" class="feedContainer">
-                    </div>
-                </div>
-        </div>
-    </div>
+            <form id="formPostagem" method="post" onsubmit="return publicar()">
+                <label>
+                    <textarea placeholder="Escreva aqui (máximo de 250 caracteres)." name="descricao"
+                        id="textarea_descricao" class="textareaPost" maxlength="250" rows="5"></textarea>
+                </label>
+                <br>
+                <button class="btnPublicar">Publicar</button>
+            </form>
 
-    <div class="bannerEnq" id="bannerEnq" style="display:none;">
-        <div class="divEnq" id="divEnqResultado" >
-            <h2 class="tituloEnq">Enquetes</h2>
-            
-            <div class="enqUnica">
-                <div class="divPerguntaUnica1">
-                    <h4 class="perguntaUnica1"> Você é daqueles que acordam com música, tomam banho escutando, cantam no metrô, enquanto lavam a louça ou em qualquer outra situação da vida? O dia todo todo dia? <br> Escreva aqui quanto tempo você costuma passar escutando bons sons.</h4>
-                    <input placeholder="Em minutos"id="inTempo" class="inTempo" onkeyup="horas()"> <br>
-                    <div id="divResultadoEnqUnica"></div>
+            <div class="divPostsAntigos">
+                <h2 class="tituloPosts">Publicações antigas</h2>
+                <div id="feedContainer" class="feedContainer">
                 </div>
-                <div class="divPerguntaUnica2">
+            </div>
+        </div>
+
+        <div class="bannerEnq" id="bannerEnq" style="display:none;">
+            <div class="divEnq" id="divEnqResultado">
+                <h2 class="tituloEnq">Enquetes</h2>
+
+                <div class="enqUnica">
+                    <div class="divPerguntaUnica1">
+                        <h4 class="perguntaUnica1"> Você é daqueles que acordam com música, tomam banho escutando,
+                            cantam no metrô, enquanto lavam a louça ou em qualquer outra situação da vida? O dia todo
+                            todo dia? <br> Escreva aqui quanto tempo você costuma passar escutando bons sons.
+                        </h4>
+                        <input placeholder="Em minutos" id="inTempo" class="inTempo" onkeyup="horas()"> <br>
+                        <div id="divResultadoEnqUnica"></div>
+                    </div>
+                    <!--- <div class="divPerguntaUnica2">
                     <h4 class="perguntaUnica2">
                         Você consegue encaixar seu estilo em uma coisa só ou cada dia decide se arrumar de um jeito? <br>
                         Pra você, Moda é liberdade? <br>
                         Quanto tempo você costuma gastar para escolher o look do dia?
-                        <input placeholder="Em minutos" type="text" id="inTempo">
                     </h4>
+                    <input placeholder="Em minutos" type="text" id="inTempo" class="inTempo2"> <br>
+                    <div id="divResultadoEnqUnica2"></div>
+                </div> -->
                 </div>
-                
-            </div>
-            
-            
-            <div class="enq1">
-                <div class="imgPerguntaEnq1">
-                    <h4 class="perguntaEnq1">Qual seria o seu mood musical com esse look?</h4>
-                    <img class="imgEnq1"src="https://static.stealthelook.com.br/wp-content/uploads/2021/12/oito-looks-estilosos-para-a-sua-confraternizacao-do-trabalho-1-20211213162314.png" alt="">
-                </div>
-                <div class="opcoesEnq1">
-                    <div class="musica1">
-                        <iframe class="songs"style="border-radius:12px" src="https://open.spotify.com/embed/track/5YqltLsjdqFtvqE7Nrysvs?utm_source=generator&theme=0" width="40%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> 
-                        <h4 class="nomeMusica">We are Never Ever Getting Back Together - Taylor Swift</h4> 
-                        <button class="btnSelecionar" onclick="selecionar(1,1)">Selecionar</button>
-                    </div>
-                    <div class="musica1">
-                        <iframe class="songs"style="border-radius:12px" src="https://open.spotify.com/embed/track/3X01VeoR0GckfiXlFRrJmF?utm_source=generator&theme=0" width="40%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> 
-                        <h4 class="nomeMusica">Home - Gabrielle Aplin</h4>
-                        <button class="btnSelecionar" onclick="selecionar(1,2)">Selecionar</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="enq2">
-                <div class="imgPerguntaEnq2">
-                    <h4 class="perguntaEnq2">Qual música ele estaria ouvindo no metrô?</h4>
-                    <img class="imgEnq2"src="https://lilianpacce.s3.amazonaws.com/wp-content/uploads/2017/03/310317-estilosos-no-metro-07.jpg" alt="">
-                </div>
-                <div class="opcoesEnq2">
-                    <div class="musica2">
-                        <iframe class="songs2" style="border-radius:12px" src="https://open.spotify.com/embed/track/4JiEyzf0Md7KEFFGWDDdCr?utm_source=generator&theme=0" width="40%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> 
-                        <h4 class="nomeMusica2">Knockin' on Heaven's Door - Guns N' Roses</h4> 
-                        <button class="btnSelecionar" onclick="selecionar(2,1)">Selecionar</button>
-                    </div>
-                    <div class="musica2">
-                        <iframe class="songs2 style="border-radius:12px" src="https://open.spotify.com/embed/track/3TYHjkemsiUrkyQcoPYW7g?utm_source=generator&theme=0" width="40%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> 
-                        <h4 class="nomeMusica2"> Velha Infância - Trabalhistas </h4>
-                        <button class="btnSelecionar" onclick="selecionar(2,2)">Selecionar</button>
-                    </div>
-                </div>
-            </div>
 
-            <div class="enq2">
-                <div class="imgPerguntaEnq2">
-                    <h4 class="perguntaEnq2">O que estaria no seu fone, caso você estivesse: </h4>
-                    <img class="imgEnq2"src="https://th.bing.com/th/id/R.42f12fc8596788bff0184183794bac74?rik=AOq5GKqafOhCBg&riu=http%3a%2f%2fquadrofeminino.com%2fwp-content%2fuploads%2f2017%2f06%2fLooks-estilosos-vestido-xadrez.jpg&ehk=esUPYelamG3T4UyuOOBcQG2PeLFXJ8F8zK0gfMO7chs%3d&risl=&pid=ImgRaw&r=0" alt="">
-                </div>
-                <div class="opcoesEnq2">
-                    <div class="musica2">
-                        <iframe class="songs2" style="border-radius:12px" src="https://open.spotify.com/embed/track/4RVwu0g32PAqgUiJoXsdF8?utm_source=generator&theme=0" width="40%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-                        <h4 class="nomeMusica2">Happier Than Ever - Billie Eilish</h4> 
-                        <button class="btnSelecionar" onclick="selecionar(3,1)">Selecionar</button>
+
+                <div class="enq1">
+                    <div class="imgPerguntaEnq1">
+                        <h4 class="perguntaEnq1">Qual seria o seu mood musical com esse look?</h4>
+                        <img class="imgEnq1"
+                            src="https://static.stealthelook.com.br/wp-content/uploads/2021/12/oito-looks-estilosos-para-a-sua-confraternizacao-do-trabalho-1-20211213162314.png"
+                            alt="">
                     </div>
-                    <div class="musica2">
-                        <iframe class="songs2" style="border-radius:12px" src="https://open.spotify.com/embed/track/73CMRj62VK8nUS4ezD2wvi?utm_source=generator&theme=0" width="40%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> 
-                        <h4 class="nomeMusica2">Set Fire to the Rain - Adele</h4>
-                        <button class="btnSelecionar" onclick="selecionar(3,2)">Selecionar</button>
+                    <div class="opcoesEnq1">
+                        <div class="musica1">
+                            <iframe class="songs" style="border-radius:12px"
+                                src="https://open.spotify.com/embed/track/5YqltLsjdqFtvqE7Nrysvs?utm_source=generator&theme=0"
+                                width="40%" height="80" frameBorder="0" allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                            <h4 class="nomeMusica">We are Never Ever Getting Back Together - Taylor Swift</h4>
+                            <button class="btnSelecionar" onclick="selecionar(1,1)">Selecionar</button>
+                        </div>
+                        <div class="musica1">
+                            <iframe class="songs" style="border-radius:12px"
+                                src="https://open.spotify.com/embed/track/3X01VeoR0GckfiXlFRrJmF?utm_source=generator&theme=0"
+                                width="40%" height="80" frameBorder="0" allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                            <h4 class="nomeMusica">Home - Gabrielle Aplin</h4>
+                            <button class="btnSelecionar" onclick="selecionar(1,2)">Selecionar</button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
                 <div class="enq2">
-                <div class="imgPerguntaEnq2">
-                    <h4 class="perguntaEnq2">Qual a música ideal para esse look de primavera?</h4>
-                    <img class="imgEnq2"src="https://i.pinimg.com/736x/60/ed/c3/60edc321984bef7db4a410116cafd9bf.jpg" alt="">
+                    <div class="imgPerguntaEnq2">
+                        <h4 class="perguntaEnq2">Qual música ele estaria ouvindo no metrô?</h4>
+                        <img class="imgEnq2"
+                            src="https://lilianpacce.s3.amazonaws.com/wp-content/uploads/2017/03/310317-estilosos-no-metro-07.jpg"
+                            alt="">
+                    </div>
+                    <div class="opcoesEnq2">
+                        <div class="musica2">
+                            <iframe class="songs2" style="border-radius:12px"
+                                src="https://open.spotify.com/embed/track/4JiEyzf0Md7KEFFGWDDdCr?utm_source=generator&theme=0"
+                                width="40%" height="80" frameBorder="0" allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                            <h4 class="nomeMusica2">Knockin' on Heaven's Door - Guns N' Roses</h4>
+                            <button class="btnSelecionar" onclick="selecionar(2,1)">Selecionar</button>
+                        </div>
+                        <div class="musica2">
+                            <iframe class="songs2 style=" border-radius:12px"
+                                src="https://open.spotify.com/embed/track/3TYHjkemsiUrkyQcoPYW7g?utm_source=generator&theme=0"
+                                width="40%" height="80" frameBorder="0" allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                            <h4 class="nomeMusica2"> Velha Infância - Trabalhistas </h4>
+                            <button class="btnSelecionar" onclick="selecionar(2,2)">Selecionar</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="opcoesEnq2">
-                    <div class="musica2">
-                        <iframe class="songs2"style="border-radius:12px" src="https://open.spotify.com/embed/track/5QUoiOFWAaV5VC2VbBhHJ4?utm_source=generator&theme=0" width="40%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-                        <h4 class="nomeMusica2">A Cor é Rosa - Silva </h4> 
-                        <button class="btnSelecionar" onclick="selecionar(4,1)">Selecionar</button>
+
+                <div class="enq2">
+                    <div class="imgPerguntaEnq2">
+                        <h4 class="perguntaEnq2">O que estaria no seu fone, caso você estivesse: </h4>
+                        <img class="imgEnq2"
+                            src="https://th.bing.com/th/id/R.42f12fc8596788bff0184183794bac74?rik=AOq5GKqafOhCBg&riu=http%3a%2f%2fquadrofeminino.com%2fwp-content%2fuploads%2f2017%2f06%2fLooks-estilosos-vestido-xadrez.jpg&ehk=esUPYelamG3T4UyuOOBcQG2PeLFXJ8F8zK0gfMO7chs%3d&risl=&pid=ImgRaw&r=0"
+                            alt="">
                     </div>
-                    <div class="musica2">
-                        <iframe class="songs2"style="border-radius:12px" src="https://open.spotify.com/embed/track/6Jkm5kUldvIqxzI1Pa7nXH?utm_source=generator&theme=0" width="40%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-                        <h4 class="nomeMusica2">10 Things I Hate About You - Leah Kate</h4>
-                        <button class="btnSelecionar" onclick="selecionar(4,2)">Selecionar</button>
+                    <div class="opcoesEnq2">
+                        <div class="musica2">
+                            <iframe class="songs2" style="border-radius:12px"
+                                src="https://open.spotify.com/embed/track/4RVwu0g32PAqgUiJoXsdF8?utm_source=generator&theme=0"
+                                width="40%" height="80" frameBorder="0" allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                            <h4 class="nomeMusica2">Happier Than Ever - Billie Eilish</h4>
+                            <button class="btnSelecionar" onclick="selecionar(3,1)">Selecionar</button>
+                        </div>
+                        <div class="musica2">
+                            <iframe class="songs2" style="border-radius:12px"
+                                src="https://open.spotify.com/embed/track/73CMRj62VK8nUS4ezD2wvi?utm_source=generator&theme=0"
+                                width="40%" height="80" frameBorder="0" allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                            <h4 class="nomeMusica2">Set Fire to the Rain - Adele</h4>
+                            <button class="btnSelecionar" onclick="selecionar(3,2)">Selecionar</button>
+                        </div>
                     </div>
+                </div>
+
+                <div class="enq2">
+                    <div class="imgPerguntaEnq2">
+                        <h4 class="perguntaEnq2">Qual a música ideal para esse look de primavera?</h4>
+                        <img class="imgEnq2"
+                            src="https://i.pinimg.com/736x/60/ed/c3/60edc321984bef7db4a410116cafd9bf.jpg" alt="">
+                    </div>
+                    <div class="opcoesEnq2">
+                        <div class="musica2">
+                            <iframe class="songs2" style="border-radius:12px"
+                                src="https://open.spotify.com/embed/track/5QUoiOFWAaV5VC2VbBhHJ4?utm_source=generator&theme=0"
+                                width="40%" height="80" frameBorder="0" allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                            <h4 class="nomeMusica2">A Cor é Rosa - Silva </h4>
+                            <button class="btnSelecionar" onclick="selecionar(4,1)">Selecionar</button>
+                        </div>
+                        <div class="musica2">
+                            <iframe class="songs2" style="border-radius:12px"
+                                src="https://open.spotify.com/embed/track/6Jkm5kUldvIqxzI1Pa7nXH?utm_source=generator&theme=0"
+                                width="40%" height="80" frameBorder="0" allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                            <h4 class="nomeMusica2">10 Things I Hate About You - Leah Kate</h4>
+                            <button class="btnSelecionar" onclick="selecionar(4,2)">Selecionar</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="enq2">
+                    <div class="imgPerguntaEnq2">
+                        <h4 class="perguntaEnq2">Para você, o que esse skatista estaria escutando?</h4>
+                        <img class="imgEnq2"
+                            src="https://i.pinimg.com/originals/5d/9f/ab/5d9fab322142308e9926353252367bd4.jpg" alt="">
+                    </div>
+                    <div class="opcoesEnq2">
+                        <div class="musica2">
+                            <iframe class="songs2" style="border-radius:12px"
+                                src="https://open.spotify.com/embed/track/67iXtoPnynomfHLEtcTC18?utm_source=generator&theme=0"
+                                width="40%" height="80" frameBorder="0" allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                            <h4 class="nomeMusica2">Amor Incendiário - Yago Oproprio</h4>
+                            <button class="btnSelecionar" onclick="selecionar(5,1)">Selecionar</button>
+                        </div>
+                        <div class="musica2">
+                            <iframe class="songs2" style="border-radius:12px"
+                                src="https://open.spotify.com/embed/track/2oaK4JLVnmRGIO9ytBE1bt?utm_source=generator&theme=0"
+                                width="40%" height="80" frameBorder="0" allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                            <h4 class="nomeMusica2">Dark Necessities - Red Hot Chili Peppers</h4>
+                            <button class="btnSelecionar" onclick="selecionar(5,2)">Selecionar</button>
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+        </div>
+
+        <div class="bannerResults" id="divResults" style="display: none;">
+            <h2 class="tituloResults">Resultados</h2>
+            <h4 class="textoResults"> &nbsp; Já participou das nossas enquetes? Acompanhe aqui os votos da nossa
+                Comunidade. </h4>
+
+            <div class="divGraficos">
+                <div class="grafico1">
+                    <canvas id="grafico1">
+                    </canvas>
+                </div>
+                <div class="grafico1">
+                    <canvas id="grafico1">
+                    </canvas>
+                </div>
+                <div class="grafico1">
+                    <canvas id="grafico1">
+                    </canvas>
                 </div>
             </div>
-
-
-            <div class="enq2">
-                <div class="imgPerguntaEnq2">
-                    <h4 class="perguntaEnq2">Para você, o que esse skatista estaria escutando?</h4>
-                    <img class="imgEnq2"src="https://i.pinimg.com/originals/5d/9f/ab/5d9fab322142308e9926353252367bd4.jpg" alt="">
+            <div class="divGraficos2">
+                <div class="grafico2">
+                    <canvas id="grafico1">
+                    </canvas>
                 </div>
-                <div class="opcoesEnq2">
-                    <div class="musica2">
-                        <iframe class="songs2"style="border-radius:12px" src="https://open.spotify.com/embed/track/67iXtoPnynomfHLEtcTC18?utm_source=generator&theme=0" width="40%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-                        <h4 class="nomeMusica2">Amor Incendiário - Yago Oproprio</h4> 
-                        <button class="btnSelecionar" onclick="selecionar(5,1)">Selecionar</button>
-                    </div>
-                    <div class="musica2">
-                        <iframe class="songs2" style="border-radius:12px" src="https://open.spotify.com/embed/track/2oaK4JLVnmRGIO9ytBE1bt?utm_source=generator&theme=0" width="40%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-                        <h4 class="nomeMusica2">Dark Necessities - Red Hot Chili Peppers</h4>
-                        <button class="btnSelecionar" onclick="selecionar(5,2)">Selecionar</button>
-                    </div>
+                <div class="grafico2">
+                    <canvas id="grafico1">
+                    </canvas>
                 </div>
-            </div> -->
-           
+            </div>
         </div>
     </div>
-
-    <div class="bannerResults" id="divResults" style="display: none;">
-        <h2 class="tituloResults">Resultados</h2>
-        <h4 class="textoResults"> &nbsp; Já participou das nossas enquetes? Acompanhe aqui os votos da nossa Comunidade. </h4>
-
-        <div class="divGraficos">
-            <div class="grafico1">
-              <canvas id="grafico1">
-              </canvas>  
-            </div>
-            <div class="grafico1">
-                <canvas id="grafico1">
-                </canvas>  
-              </div>
-              <div class="grafico1">
-                <canvas id="grafico1">
-                </canvas>  
-              </div>
-        </div>
-        <div class="divGraficos2">
-            <div class="grafico2">
-                <canvas id="grafico1">
-                </canvas>  
-            </div>
-            <div class="grafico2">
-                <canvas id="grafico1">
-                </canvas>  
-            </div>
-        </div>
-    </div>
-</div>
 
 </body>
+
 </html>
 
 <script>
-    $(document).ready(function() {
-        $('#selConta1').on('change',function() {
+
+    $(document).ready(function () {
+        $('#selConta1').on('change', function () {
             var url = $(this).val();
-            if(url) {
-                window.open(url,'blank');
+            if (url) {
+                window.open(url, 'blank');
             }
             return false;
         });
-    
+
     });
     function sair() {
         window.location = "../index.html";
-        
+
         sessionStorage.EMAIL_USUARIO = '';
         sessionStorage.NOME_USUARIO = '';
         sessionStorage.ID_USUARIO = '';
-        }
+    }
     function inicial() {
         divOp.style.display = 'block'
         divPostsResultado.style.display = 'none'
@@ -245,13 +290,13 @@
         divPostsResultado.style.display = 'block'
         bannerEnq.style.display = 'none'
         divResults.style.display = 'none'
-}
+    }
     function enq() {
         divOp.style.display = 'none'
         divPostsResultado.style.display = 'none'
         bannerEnq.style.display = 'block'
         divResults.style.display = 'none'
-}
+    }
     function result() {
         divOp.style.display = 'none'
         divPostsResultado.style.display = 'none'
@@ -261,212 +306,214 @@
 
     function horas() {
         divResultadoEnqUnica.innerHTML = ''
-        let minutos = Number (inTempo.value)
-        let menorqueZero = minutos <= 0 
-        let poucosMinutos = minutos >0 && minutos <=60
-        let bastanteMinutos = minutos >60 && minutos 
-        <150
-        let muitosMinutos = minutos > 150
+        let minutos = Number(inTempo.value)
+        let calculo = Number(minutos / 60)
+        let menorqueZero = calculo <= 0
+        let poucosMinutos = calculo > 0 && calculo <= 1
+        let bastanteMinutos = calculo > 2 && calculo
+            < 3
+        let muitosMinutos = calculo > 4
         if (menorqueZero) {
-        divResultadoEnqUnica.innerHTML = `Opa, pera lá, não dá pra ter escutado minutos negativos de música!`
+            divResultadoEnqUnica.innerHTML = `Opa, pera lá, não dá pra ter escutado zero minutos de música!`
         } else {
             if (poucosMinutos) {
-            divResultadoEnqUnica.innerHTML = `Pelo visto você não é um ouvinte tão assíduo, né?!`
+                divResultadoEnqUnica.innerHTML = `Você escuta ${Number(parseInt(calculo))} horas por dia, não chega nem a ser 1 hora. Pelo visto você não é um ouvinte tão assíduo, né?!`
             }
             if (bastanteMinutos) {
-            divResultadoEnqUnica.innerHTML = `Esse aí gosta de aproveitar pelo menos umas 2h de música no dia!`
+                divResultadoEnqUnica.innerHTML = `Você escuta ${Number(parseInt(calculo))} horas por dia. Esse aí gosta de aproveitar pelo menos umas 2h de música no dia!`
             }
             if (muitosMinutos) {
-            divResultadoEnqUnica.innerHTML = `Você é igualzinho ao exemplo, né?! Daqueles que ouvem música o tempo todo!`
+                divResultadoEnqUnica.innerHTML = `Você escuta ${Number(parseInt(calculo))} horas por dia. Você é igualzinho ao exemplo, né?! Daqueles que ouvem música o tempo todo!`
             }
         }
     }
 
-    function selecionar(pergunta,resposta) {
-        alert (`Na pergunta ${pergunta}, você respondeu ${resposta}.`)
+    function selecionar(pergunta, resposta) {
+        alert(`Na pergunta ${pergunta}, você respondeu ${resposta}.`)
 
         sessionStorage.ID_USUARIO = json.idUsuario;
-        sessionStorage.RESPOSTA =   json.resposta;
-}
+        sessionStorage.RESPOSTA = json.resposta;
+    }
 
 </script>
 
 <script>
     function publicar() {
-            var idUsuario = sessionStorage.ID_USUARIO;
-            var corpo = {
-                descricao: form_postagem.descricao.value
+        var idUsuario = sessionStorage.ID_USUARIO;
+        var corpo = {
+            descricao: formPostagem.descricao.value
+        }
+
+        fetch(`/avisos/publicar/${idUsuario}`, {
+            method: "post",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(corpo)
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                window.alert("Post realizado com sucesso pelo usuario de ID: " + idUsuario + "!");
+                feedContainer.innerHTML = ``
+            } else if (resposta.status == 404) {
+                window.alert("Deu 404!");
+            } else {
+                throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
             }
-    
-            fetch(`/avisos/publicar/${idUsuario}`, {
-                method: "post",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(corpo)
-            }).then(function (resposta) {
-    
-                console.log("resposta: ", resposta);
-    
-                if (resposta.ok) {
-                    window.alert("Post realizado com sucesso pelo usuario de ID: " + idUsuario + "!");
-                    feed_container.innerHTML = `` 
-                } else if (resposta.status == 404) {
-                    window.alert("Deu 404!");
-                } else {
-                    throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+
+        return false;
+
+    }
+
+    function editar(idAviso) {
+        sessionStorage.ID_POSTAGEM_EDITANDO = idAviso;
+        console.log("cliquei em editar - " + idAviso);
+        window.alert("Você será redirecionado à página de edição do aviso de id número: " + idAviso);
+        window.location = "/dashboard/edicao-aviso.html"
+
+    }
+
+    function deletar(idAviso) {
+        console.log("Criar função de apagar post escolhido - ID" + idAviso);
+        fetch(`/avisos/deletar/${idAviso}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        }).then(function (resposta) {
+
+            if (resposta.ok) {
+                window.alert("Post deletado com sucesso pelo usuario de email: " + sessionStorage.getItem("EMAIL_USUARIO") + "!");
+                window.location = "/dashboard/interacoes2.html"
+            } else if (resposta.status == 404) {
+                window.alert("Deu 404!");
+            } else {
+                throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+    }
+
+    function atualizarFeed() {
+        //aguardar();
+        fetch("/avisos/listar").then(function (resposta) {
+            if (resposta.ok) {
+                if (resposta.status == 204) {
+                    var feed = document.getElementById("feedContainer");
+                    var mensagem = document.createElement("span");
+                    mensagem.innerHTML = "Nenhum resultado encontrado."
+                    feed.appendChild(mensagem);
+                    throw "Nenhum resultado encontrado!!";
                 }
-            }).catch(function (resposta) {
-                console.log(`#ERRO: ${resposta}`);
-            });
-    
-            return false;
-    
-        }
-    
-        function editar(idAviso) {
-            sessionStorage.ID_POSTAGEM_EDITANDO = idAviso;
-            console.log("cliquei em editar - " + idAviso);
-            window.alert("Você será redirecionado à página de edição do aviso de id número: " + idAviso);
-            window.location = "/dashboard/edicao-aviso.html"
-    
-        }
-    
-        function deletar(idAviso) {
-            console.log("Criar função de apagar post escolhido - ID" + idAviso);
-            fetch(`/avisos/deletar/${idAviso}`, {
-                method: "DELETE",
-                headers: {
-                    "Content-Type": "application/json"
-                }
-            }).then(function (resposta) {
-    
-                if (resposta.ok) {
-                    window.alert("Post deletado com sucesso pelo usuario de email: " + sessionStorage.getItem("EMAIL_USUARIO") + "!");
-                    window.location = "/dashboard/interacoes2.html"
-                } else if (resposta.status == 404) {
-                    window.alert("Deu 404!");
-                } else {
-                    throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
-                }
-            }).catch(function (resposta) {
-                console.log(`#ERRO: ${resposta}`);
-            });
-        }
-    
-        function atualizarFeed() {
-            //aguardar();
-            fetch("/avisos/listar").then(function (resposta) {
-                if (resposta.ok) {
-                    if (resposta.status == 204) {
-                        var feed = document.getElementById("feed_container");
-                        var mensagem = document.createElement("span");
-                        mensagem.innerHTML = "Nenhum resultado encontrado."
-                        feed.appendChild(mensagem);
-                        throw "Nenhum resultado encontrado!!";
+
+                resposta.json().then(function (resposta) {
+                    console.log("Dados recebidos: ", JSON.stringify(resposta));
+
+                    var feed = document.getElementById("feedContainer");
+                    feed.innerHTML = "";
+                    for (let i = 0; i < resposta.length; i++) {
+                        var publicacao = resposta[i];
+
+                        // criando e manipulando elementos do HTML via JavaScript
+                        var divPublicacao = document.createElement("div");
+                        var spanID = document.createElement("span");
+                        var spanNome = document.createElement("span");
+                        var divDescricao = document.createElement("div");
+                        var divButtons = document.createElement("div");
+                        var btnEditar = document.createElement("button");
+                        var btnDeletar = document.createElement("button");
+
+
+                        spanID.innerHTML = "ID: <b>" + publicacao.idAviso + "</b>";
+                        spanNome.innerHTML = "Autor: <b>" + publicacao.nome + "</b>";
+                        divDescricao.innerHTML = "Descrição: <b>" + publicacao.descricao + "</b>";
+                        btnEditar.innerHTML = "Editar";
+                        btnDeletar.innerHTML = "Deletar";
+
+                        divPublicacao.className = "publicacao";
+                        spanNome.className = "publicacao-nome";
+                        divDescricao.className = "publicacao-descricao";
+
+                        divButtons.className = "div-buttons"
+
+                        btnEditar.className = "publicacao-btn-editar"
+                        btnEditar.id = "btnEditar" + publicacao.idAviso;
+                        btnEditar.setAttribute("onclick", `editar(${publicacao.idAviso})`);
+
+                        btnDeletar.className = "publicacao-btn-editar"
+                        btnDeletar.id = "btnDeletar" + publicacao.idAviso;
+                        btnDeletar.setAttribute("onclick", `deletar(${publicacao.idAviso})`);
+
+                        divPublicacao.appendChild(spanID);
+                        divPublicacao.appendChild(spanNome);
+                        divPublicacao.appendChild(divDescricao);
+                        divPublicacao.appendChild(divButtons);
+                        divButtons.appendChild(btnEditar);
+                        divButtons.appendChild(btnDeletar);
+                        feed.appendChild(divPublicacao);
                     }
-    
-                    resposta.json().then(function (resposta) {
-                        console.log("Dados recebidos: ", JSON.stringify(resposta));
-    
-                        var feed = document.getElementById("feed_container");
-                        feed.innerHTML = "";
-                        for (let i = 0; i < resposta.length; i++) {
-                            var publicacao = resposta[i];
-    
-                            // criando e manipulando elementos do HTML via JavaScript
-                            var divPublicacao = document.createElement("div");
-                            var spanID = document.createElement("span");
-                            var spanNome = document.createElement("span");
-                            var divDescricao = document.createElement("div");
-                            var divButtons = document.createElement("div");
-                            var btnEditar = document.createElement("button");
-                            var btnDeletar = document.createElement("button");
-    
-    
-                            spanID.innerHTML = "ID: <b>" + publicacao.idAviso + "</b>";
-                            spanNome.innerHTML = "Autor: <b>" + publicacao.nome + "</b>";
-                            divDescricao.innerHTML = "Descrição: <b>" + publicacao.descricao + "</b>";
-                            btnEditar.innerHTML = "Editar";
-                            btnDeletar.innerHTML = "Deletar";
-    
-                            divPublicacao.className = "publicacao";
-                            spanNome.className = "publicacao-nome";
-                            divDescricao.className = "publicacao-descricao";
-    
-                            divButtons.className = "div-buttons"
-    
-                            btnEditar.className = "publicacao-btn-editar"
-                            btnEditar.id = "btnEditar" + publicacao.idAviso;
-                            btnEditar.setAttribute("onclick", `editar(${publicacao.idAviso})`);
-    
-                            btnDeletar.className = "publicacao-btn-editar"
-                            btnDeletar.id = "btnDeletar" + publicacao.idAviso;
-                            btnDeletar.setAttribute("onclick", `deletar(${publicacao.idAviso})`);
-    
-                            divPublicacao.appendChild(spanID);
-                            divPublicacao.appendChild(spanNome);
-                            divPublicacao.appendChild(divDescricao);
-                            divPublicacao.appendChild(divButtons);
-                            divButtons.appendChild(btnEditar);
-                            divButtons.appendChild(btnDeletar);
-                            feed.appendChild(divPublicacao);
-                        }
-    
-                    });
-                } else {
-                    throw ('Houve um erro na API!');
-                }
-            }).catch(function (resposta) {
-                console.error(resposta);
-            });
-        }
-    
-        function testar() {
-    
-            var formulario = new URLSearchParams(new FormData(document.getElementById("form_postagem")));
-    
-            var divResultado = document.getElementById("div_feed");
-    
-            divResultado.appendChild(document.createTextNode(formulario.get("descricao")));
-            divResultado.innerHTML = formulario.get("descricao");
-    
-    
-            return false;
-        }
-    
-    </script>
+
+                });
+            } else {
+                throw ('Houve um erro na API!');
+            }
+        }).catch(function (resposta) {
+            console.error(resposta);
+        });
+    }
+
+    function testar() {
+
+        var formulario = new URLSearchParams(new FormData(document.getElementById("form_postagem")));
+
+        var divResultado = document.getElementById("div_feed");
+
+        divResultado.appendChild(document.createTextNode(formulario.get("descricao")));
+        divResultado.innerHTML = formulario.get("descricao");
+
+
+        return false;
+    }
+    window.document.body.onload = atualizarFeed();
+
+</script>
 
 <script>
 
     let proximaAtualizacao;
-  
+
     window.onload = obterDadosGrafico(1);
 
-  
+
     // O gráfico é construído com três funções:
     // 1. obterDadosGrafico -> Traz dados do Banco de Dados para montar o gráfico da primeira vez
     // 2. plotarGrafico -> Monta o gráfico com os dados trazidos e exibe em tela
     // 3. atualizarGrafico -> Atualiza o gráfico, trazendo novamente dados do Banco
-  
+
     // Esta função *obterDadosGrafico* busca os últimos dados inseridos em tabela de medidas.
     // para, quando carregar o gráfico da primeira vez, já trazer com vários dados.
     // A função *obterDadosGrafico* também invoca a função *plotarGrafico*
-  
+
     //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
     //     Para ajustar o "select", ajuste o comando sql em src/models
     function obterDadosGrafico(idEnq) {
-  
+
         if (proximaAtualizacao != undefined) {
             clearTimeout(proximaAtualizacao);
         }
-  
+
         fetch(`/enquetes/resposta/${idEnq}`, { cache: 'no-store' }).then(function (response) {
             if (response.ok) {
                 response.json().then(function (resposta) {
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
                     resposta.reverse();
-  
+
                     plotarGrafico(resposta, idEnq);
                 });
             } else {
@@ -477,13 +524,13 @@
                 console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
             });
     }
-  
+
     // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
     // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
     // A função *plotarGrafico* também invoca a função *atualizarGrafico*
     function plotarGrafico(resposta, idEnq) {
         console.log('iniciando plotagem do gráfico...');
-  
+
         var dados = {
             labels: [],
             datasets: [
@@ -505,16 +552,16 @@
                 }
             ]
         };
-  
+
         for (i = 0; i < resposta.length; i++) {
             var registro = resposta[i];
             dados.labels.push(registro.momento_grafico);
             dados.datasets[0].data.push(registro.umidade);
             dados.datasets[1].data.push(registro.temperatura);
         }
-  
+
         console.log(JSON.stringify(dados));
-  
+
         var ctx = canvas_grafico.getContext('2d');
         window.grafico_linha = Chart.Line(ctx, {
             data: dados,
@@ -548,7 +595,7 @@
                             max: 100,
                             min: 0
                         },
-  
+
                         gridLines: {
                             drawOnChartArea: false,
                         },
@@ -556,37 +603,37 @@
                 }
             }
         });
-  
+
         setTimeout(() => atualizarGrafico(idAquario, dados), 2000);
     }
-  
-  
+
+
     // Esta função *atualizarGrafico* atualiza o gráfico que foi renderizado na página,
     // buscando a última medida inserida em tabela contendo as capturas, 
-  
+
     //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
     //     Para ajustar o "select", ajuste o comando sql em src/models
     function atualizarGrafico(idAquario, dados) {
-  
+
         fetch(`/medidas/tempo-real/${idAquario}`, { cache: 'no-store' }).then(function (response) {
             if (response.ok) {
                 response.json().then(function (novoRegistro) {
-  
+
                     console.log(`Dados recebidos: ${JSON.stringify(novoRegistro)}`);
                     console.log(`Dados atuais do gráfico: ${dados}`);
-  
+
                     // tirando e colocando valores no gráfico
                     dados.labels.shift(); // apagar o primeiro
                     dados.labels.push(novoRegistro[0].momento_grafico); // incluir um novo momento
-                    
+
                     dados.datasets[0].data.shift();  // apagar o primeiro de umidade
                     dados.datasets[0].data.push(novoRegistro[0].umidade); // incluir uma nova medida de umidade
-                    
+
                     dados.datasets[1].data.shift();  // apagar o primeiro de temperatura
                     dados.datasets[1].data.push(novoRegistro[0].temperatura); // incluir uma nova medida de temperatura
-  
+
                     window.grafico_linha.update();
-  
+
                     // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
                     proximaAtualizacao = setTimeout(() => atualizarGrafico(idAquario, dados), 2000);
                 });
@@ -599,7 +646,6 @@
             .catch(function (error) {
                 console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
             });
-  
+
     }
-  </script>
-    
+</script>

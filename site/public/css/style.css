@@ -458,10 +458,109 @@ li:hover {
     margin-top: 13%;
     margin-bottom: 5%;
     display: flex;
+    flex-direction: column;
 }
-.divResultado {
-    
+#feedContainer {
+    background-color: #2D4B1A;
+    width: 80%;
+    height: 30%;
+    border: #663399 4px solid;
+    margin: 5%;
 }
+
+/*css do acquatec */
+.dash-right .avisos {
+    width: 100%;
+    /* border: 3px solid pink; */
+    color: rgb(216, 216, 216);
+  }
+  
+  .dash-right .avisos .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .dash-right .avisos .container .div-form {
+    width: 100%;
+  }
+  
+  .dash-right .avisos .container .div-form #form_postagem {
+    width: 100%;
+  }
+  
+  .dash-right .avisos .div-form label {
+    width: 100%;
+  }
+  
+  .dash-right .avisos .div-form input {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .dash-right .avisos .div-form textarea {
+    width: 100%;
+    /* color: #E6005A; */
+    border: 3px solid white;
+    background-color: white;
+    border-radius: 5px;
+  }
+  
+  .dash-right .avisos .div-form button {
+    border: 0;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 15px;
+    color: white;
+    background-color: #2D4B1A;
+    width: 120px;
+  }
+  
+  .publicacao-btn-editar {
+    border: 0;
+    margin: 5%;
+    font-size: 14px;
+    padding: 5px 8px;
+    color: white;
+    background-color: #2D4B1A;
+    width: 80px;
+  }
+  
+  .publicacao {
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    flex-wrap: wrap;
+    align-content: stretch;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    border-bottom: 3px solid #e6005a;
+    padding: 20px;
+  }
+  
+  .publicacao > *:not(:last-child) {
+    padding: 0 0 10px 0;
+  }
+  
+  .div-results {
+    width: 100%;
+  }
+  
+  .div-results .feed-container {
+    background-color: #212124;
+    border-radius: 5px;
+    margin-bottom: 80px;
+  }
+  
+  .div-buttons {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .div-buttons > * {
+    margin-left: 30px;
+  }
 
 /*ENQUETES*/
 .bannerEnq {
@@ -709,14 +808,14 @@ li {
     height: 70vh;
     margin-top: 1%;
     margin-left: 18%;
+    margin-bottom: 2%;
 }
 .divPerguntaUnica1 {
     width: 50%;
 }
 .perguntaUnica1 {
-    width: 100%;
-    height: 100%;
-    padding: 3%;
+    width: 80%;
+    padding-left: 5%;
 }
 .inTempo {
     font-size: 15px;
@@ -727,11 +826,19 @@ li {
 }
 #divResultadoEnqUnica {
     padding: 5%;
-    width: 50%;
+    width: 100%;
 }
 .divPerguntaUnica2 {
     width: 50%;
 }
 .perguntaUnica2 {
     width: 100%;
+}
+
+.inTempo2 {
+    font-size: 15px;
+    width: 30%;
+    height:8%;
+    border: #2D4B1A 2px solid;
+    margin-left: 5%;
 }
