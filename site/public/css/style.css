@@ -699,3 +699,39 @@ li {
         padding-top: 5%;
         display: flex;
     }
+
+.enqUnica {
+    display: flex;
+    color: white;
+    border: #663399 8px ridge;
+    background-color: #663399;
+    width: 65%;
+    height: 70vh;
+    margin-top: 1%;
+    margin-left: 18%;
+}
+.divPerguntaUnica1 {
+    width: 50%;
+}
+.perguntaUnica1 {
+    width: 100%;
+    height: 100%;
+    padding: 3%;
+}
+.inTempo {
+    font-size: 15px;
+    width: 30%;
+    height:8%;
+    border: #2D4B1A 2px solid;
+    margin-left: 5%;
+}
+#divResultadoEnqUnica {
+    padding: 5%;
+    width: 50%;
+}
+.divPerguntaUnica2 {
+    width: 50%;
+}
+.perguntaUnica2 {
+    width: 100%;
+}

@@ -65,6 +65,24 @@
         <div class="divEnq" id="divEnqResultado" >
             <h2 class="tituloEnq">Enquetes</h2>
             
+            <div class="enqUnica">
+                <div class="divPerguntaUnica1">
+                    <h4 class="perguntaUnica1"> Você é daqueles que acordam com música, tomam banho escutando, cantam no metrô, enquanto lavam a louça ou em qualquer outra situação da vida? O dia todo todo dia? <br> Escreva aqui quanto tempo você costuma passar escutando bons sons.</h4>
+                    <input placeholder="Em minutos"id="inTempo" class="inTempo" onkeyup="horas()"> <br>
+                    <div id="divResultadoEnqUnica"></div>
+                </div>
+                <div class="divPerguntaUnica2">
+                    <h4 class="perguntaUnica2">
+                        Você consegue encaixar seu estilo em uma coisa só ou cada dia decide se arrumar de um jeito? <br>
+                        Pra você, Moda é liberdade? <br>
+                        Quanto tempo você costuma gastar para escolher o look do dia?
+                        <input placeholder="Em minutos" type="text" id="inTempo">
+                    </h4>
+                </div>
+                
+            </div>
+            
+            
             <div class="enq1">
                 <div class="imgPerguntaEnq1">
                     <h4 class="perguntaEnq1">Qual seria o seu mood musical com esse look?</h4>
@@ -239,6 +257,29 @@
         divPostsResultado.style.display = 'none'
         bannerEnq.style.display = 'none'
         divResults.style.display = 'block'
+    }
+
+    function horas() {
+        divResultadoEnqUnica.innerHTML = ''
+        let minutos = Number (inTempo.value)
+        let menorqueZero = minutos <= 0 
+        let poucosMinutos = minutos >0 && minutos <=60
+        let bastanteMinutos = minutos >60 && minutos 
+        <150
+        let muitosMinutos = minutos > 150
+        if (menorqueZero) {
+        divResultadoEnqUnica.innerHTML = `Opa, pera lá, não dá pra ter escutado minutos negativos de música!`
+        } else {
+            if (poucosMinutos) {
+            divResultadoEnqUnica.innerHTML = `Pelo visto você não é um ouvinte tão assíduo, né?!`
+            }
+            if (bastanteMinutos) {
+            divResultadoEnqUnica.innerHTML = `Esse aí gosta de aproveitar pelo menos umas 2h de música no dia!`
+            }
+            if (muitosMinutos) {
+            divResultadoEnqUnica.innerHTML = `Você é igualzinho ao exemplo, né?! Daqueles que ouvem música o tempo todo!`
+            }
+        }
     }
 
     function selecionar(pergunta,resposta) {
