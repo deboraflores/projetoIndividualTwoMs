@@ -20,4 +20,11 @@ router.post("/autenticar", function (req, res) {
     usuarioController.entrar(req, res);
 });
 
+router.post("/selecionar/:resposta/:fkUsuario/:fkEnquete", function (req,res) {
+    usuarioController.selecionar(req,res);
+});
+router.get("/resultadoVotacao/:idEnq", function (req,res) {
+    usuarioController.obterDadosVotacao(req,res);
+});
+
 module.exports = router;

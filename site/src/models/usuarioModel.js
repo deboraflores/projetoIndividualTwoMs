@@ -31,8 +31,26 @@ function cadastrar(nome, email, senha) {
     return database.executar(instrucao);
 }
 
+function selecionar(resposta,fkUsuario,fkEnquete) {
+    var instrucao = `
+        INSERT INTO respostas (resposta,fkUsuario,fkEnquete) VALUES ('${resposta}','${fkUsuario}','${fkEnquete}');`;
+        
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+function obterDadosVotacao(idEnq) {
+    var instrucao = `
+    select (select count(resposta) from respostas where fkEnquete = ${idEnq} and resposta = 1) as 'RespostaMusica1', 
+    (select count(resposta) from respostas where fkEnquete = ${idEnq} and resposta = 2) as 'RespostaMusica2';`;
+    
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+} 
 module.exports = {
     entrar,
     cadastrar,
     listar,
+    selecionar,
+    obterDadosVotacao
 };

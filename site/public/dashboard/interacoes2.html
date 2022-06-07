@@ -8,6 +8,8 @@
     <title>TwoM's - Comunidade</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="./assets/icon/fav.png">
+    <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -68,7 +70,8 @@
 
                 <div class="enqUnica">
                     <div class="divPerguntaUnica1">
-                        <h3 class="tituloPergunta">Antes de responder as enquetes, responda pra gente uma perguntinha básica:</h3>
+                        <h3 class="tituloPergunta">Antes de responder as enquetes, responda pra gente uma perguntinha
+                            básica:</h3>
                         <p class="perguntaUnica1"> &nbsp; Você é daqueles que acordam com música, tomam banho escutando,
                             cantam no metrô, enquanto lavam a louça ou em qualquer outra situação da vida? O dia todo
                             todo dia? <br> &nbsp; Escreva aqui quanto tempo você costuma passar escutando Música!
@@ -102,7 +105,7 @@
                                 width="40%" height="80" frameBorder="0" allowfullscreen=""
                                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
                             <h4 class="nomeMusica">We are Never Ever Getting Back Together - Taylor Swift</h4>
-                            <button class="btnSelecionar" onclick="selecionar(1,1)">Selecionar</button>
+                            <button class="btnSelecionar" onclick="selecionarNovo(1,1)">Selecionar</button>
                         </div>
                         <div class="musica1">
                             <iframe class="songs" style="border-radius:12px"
@@ -110,7 +113,7 @@
                                 width="40%" height="80" frameBorder="0" allowfullscreen=""
                                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
                             <h4 class="nomeMusica">Home - Gabrielle Aplin</h4>
-                            <button class="btnSelecionar" onclick="selecionar(1,2)">Selecionar</button>
+                            <button class="btnSelecionar" onclick="selecionarNovo(1,2)">Selecionar</button>
                         </div>
                     </div>
                 </div>
@@ -129,7 +132,7 @@
                                 width="40%" height="80" frameBorder="0" allowfullscreen=""
                                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
                             <h4 class="nomeMusica2">Knockin' on Heaven's Door - Guns N' Roses</h4>
-                            <button class="btnSelecionar" onclick="selecionar(2,1)">Selecionar</button>
+                            <button class="btnSelecionar" onclick="selecionarNovo(2,1)">Selecionar</button>
                         </div>
                         <div class="musica2">
                             <iframe class="songs2 style=" border-radius:12px"
@@ -137,7 +140,7 @@
                                 width="40%" height="80" frameBorder="0" allowfullscreen=""
                                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
                             <h4 class="nomeMusica2"> Velha Infância - Trabalhistas </h4>
-                            <button class="btnSelecionar" onclick="selecionar(2,2)">Selecionar</button>
+                            <button class="btnSelecionar" onclick="selecionarNovo(2,2)">Selecionar</button>
                         </div>
                     </div>
                 </div>
@@ -156,7 +159,7 @@
                                 width="40%" height="80" frameBorder="0" allowfullscreen=""
                                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
                             <h4 class="nomeMusica2">Happier Than Ever - Billie Eilish</h4>
-                            <button class="btnSelecionar" onclick="selecionar(3,1)">Selecionar</button>
+                            <button class="btnSelecionar" onclick="selecionarNovo(3,1)">Selecionar</button>
                         </div>
                         <div class="musica2">
                             <iframe class="songs2" style="border-radius:12px"
@@ -164,7 +167,7 @@
                                 width="40%" height="80" frameBorder="0" allowfullscreen=""
                                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
                             <h4 class="nomeMusica2">Set Fire to the Rain - Adele</h4>
-                            <button class="btnSelecionar" onclick="selecionar(3,2)">Selecionar</button>
+                            <button class="btnSelecionar" onclick="selecionarNovo(3,2)">Selecionar</button>
                         </div>
                     </div>
                 </div>
@@ -182,7 +185,7 @@
                                 width="40%" height="80" frameBorder="0" allowfullscreen=""
                                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
                             <h4 class="nomeMusica2">A Cor é Rosa - Silva </h4>
-                            <button class="btnSelecionar" onclick="selecionar(4,1)">Selecionar</button>
+                            <button class="btnSelecionar" onclick="selecionarNovo(4,1)">Selecionar</button>
                         </div>
                         <div class="musica2">
                             <iframe class="songs2" style="border-radius:12px"
@@ -190,7 +193,7 @@
                                 width="40%" height="80" frameBorder="0" allowfullscreen=""
                                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
                             <h4 class="nomeMusica2">10 Things I Hate About You - Leah Kate</h4>
-                            <button class="btnSelecionar" onclick="selecionar(4,2)">Selecionar</button>
+                            <button class="btnSelecionar" onclick="selecionarNovo(4,2)">Selecionar</button>
                         </div>
                     </div>
                 </div>
@@ -209,7 +212,7 @@
                                 width="40%" height="80" frameBorder="0" allowfullscreen=""
                                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
                             <h4 class="nomeMusica2">Amor Incendiário - Yago Oproprio</h4>
-                            <button class="btnSelecionar" onclick="selecionar(5,1)">Selecionar</button>
+                            <button class="btnSelecionar" onclick="selecionarNovo(5,1)">Selecionar</button>
                         </div>
                         <div class="musica2">
                             <iframe class="songs2" style="border-radius:12px"
@@ -217,7 +220,7 @@
                                 width="40%" height="80" frameBorder="0" allowfullscreen=""
                                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
                             <h4 class="nomeMusica2">Dark Necessities - Red Hot Chili Peppers</h4>
-                            <button class="btnSelecionar" onclick="selecionar(5,2)">Selecionar</button>
+                            <button class="btnSelecionar" onclick="selecionarNovo(5,2)">Selecionar</button>
                         </div>
                     </div>
                 </div> -->
@@ -232,7 +235,7 @@
 
             <div class="divGraficos">
                 <div class="grafico1">
-                    <canvas id="grafico1">
+                    <canvas id="grafico_1">
                     </canvas>
                 </div>
                 <div class="grafico1">
@@ -306,14 +309,15 @@
     }
 
     function horas() {
+        gif = []
         divResultadoEnqUnica.innerHTML = ''
         let minutos = Number(inTempo.value)
         let calculo = Number(minutos / 60)
         let menorqueZero = calculo <= 0
-        let poucosMinutos = calculo > 0 && calculo <= 2
-        let bastanteMinutos = calculo > 2 && calculo
-            < 4
-        let muitosMinutos = calculo > 5
+        let poucosMinutos = calculo > 0 && calculo <= 1
+        let bastanteMinutos = calculo > 1 && calculo
+            < 3
+        let muitosMinutos = calculo > 3
         if (menorqueZero) {
             divResultadoEnqUnica.innerHTML = `Opa, pera lá, não dá pra ter escutado zero minutos de música!`
         } else {
@@ -329,16 +333,7 @@
         }
     }
 
-    function selecionar(pergunta, resposta) {
-        alert(`Na pergunta ${pergunta}, você respondeu ${resposta}.`)
 
-        sessionStorage.ID_USUARIO = json.idUsuario;
-        sessionStorage.RESPOSTA = json.resposta;
-    }
-
-</script>
-
-<script>
     function publicar() {
         var idUsuario = sessionStorage.ID_USUARIO;
         var corpo = {
@@ -481,17 +476,16 @@
 
         return false;
     }
-    window.document.body.onload = atualizarFeed();
 
-</script>
+    window.onload = funcaoPreenchendoTudo();
+    function funcaoPreenchendoTudo () {
+        obterDadosVotacao(1,grafico_1)
+        obterDadosVotacao(2,grafico2)
+        obterDadosVotacao(3,grafico3)
+        obterDadosVotacao(4,grafico4)
+        obterDadosVotacao(5,grafico5)
 
-<script>
-
-    let proximaAtualizacao;
-
-    window.onload = obterDadosGrafico(1);
-
-
+    }
     // O gráfico é construído com três funções:
     // 1. obterDadosGrafico -> Traz dados do Banco de Dados para montar o gráfico da primeira vez
     // 2. plotarGrafico -> Monta o gráfico com os dados trazidos e exibe em tela
@@ -503,40 +497,46 @@
 
     //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
     //     Para ajustar o "select", ajuste o comando sql em src/models
-    function obterDadosGrafico(idEnq) {
+    var idUsuario = sessionStorage.ID_USUARIO
+        function selecionarNovo(pergunta, resposta) {
+            alert(`Na pergunta ${pergunta}, você respondeu ${resposta}.`)
 
-        if (proximaAtualizacao != undefined) {
-            clearTimeout(proximaAtualizacao);
+            /* idUsuarioServer:idUsuario;
+            sessionStorage.RESPOSTA = json.resposta;
+         */
+            fetch(`/usuarios/selecionar/${resposta}/${idUsuario}/${pergunta}`, {
+                method: "POST"
+                /* headers: {
+                        "Content-Type": "application/json"
+                } */
+                /* body: JSON.stringify({
+                    idUsuarioServer : idUsuario,
+                    idEnqServer:  VALIDAR_ENQUETE_CLICADA, // como que eu chamo o parâmetro?
+                    resposta: VALOR_SELECIONADO_PELO_USUARIO
+                }) */
+            })
+                .catch(function (error) {
+                    console.log(`Erro: ${error.message}`)
+                });
+
         }
+    
+    
+    
+    
+    function obterDadosVotacao(idEnq,idDiv) {
 
-        /*BODY DA REQUISIÇÃO {
-	idUsuario: USUARIO_LOGADO (que está no sessionStorage),
-	idEnquete: VALIDAR_ENQUETE_CLICADA (faz um if e coloca o valor de acordo, por exemplo, se cliquei no primeiro selecionar, passo o idEnquete 1)
-	resposta: VALOR_SELECIONADO_PELO_USUARIO (o que você está exibindo no alerta atualmente)
-}*/
+        /* if (proximaAtualizacao != undefined) {
+            clearTimeout(proximaAtualizacao);
+        } */
         
-function registrarRespostas(idResposta) {
-    
-    fetch("/respostas/registrarRespostas", {
-        method: "POST",
-        headers: {
-                "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            idUsuario: sessionStorage.USUARIO_LOGADO,
-            idEnq: VALIDAR_ENQUETE_CLICADA,
-            resposta: VALOR_SELECIONADO_PELO_USUARIO
-        })
-    })
-    
-}
-        /* fetch(`/enquetes/resposta/${idEnq}`, { cache: 'no-store' }).then(function (response) {
+        fetch(`/usuarios/resultadoVotacao/${idEnq}`, { cache: 'no-store' }).then(function (response) {
             if (response.ok) {
                 response.json().then(function (resposta) {
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
                     resposta.reverse();
 
-                    plotarGrafico(resposta, idEnq);
+                    plotarGrafico(resposta, idDiv);
                 });
             } else {
                 console.error('Nenhum dado encontrado ou erro na API');
@@ -544,57 +544,55 @@ function registrarRespostas(idResposta) {
         })
             .catch(function (error) {
                 console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-            }); */
+            });
     }
-    
+
 
     // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
     // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
     // A função *plotarGrafico* também invoca a função *atualizarGrafico*
-    function plotarGrafico(resposta, idEnq) {
+    function plotarGrafico(resposta, idDiv ) {
         console.log('iniciando plotagem do gráfico...');
-
+        console.log('resposta')
+        console.log(resposta)
         var dados = {
-            labels: [],
+            labels: ['Votos na Música1', 'Votos na Música2'],
             datasets: [
                 {
-                    yAxisID: 'Enquete 1',
+                    yAxisID: 'Enquetes',
                     label: 'Resposta',
                     borderColor: '#663399',
-                    backgroundColor: '#ffffff',
+                    backgroundColor: '#2D4B1A',
                     fill: true,
-                    data: []
+                    data: [resposta.RespostaMusica1, resposta.RespostaMusica2]
                 },
-                {
-                    yAxisID: 'y-temperatura',
-                    label: 'Temperatura',
-                    borderColor: '#FFF',
-                    backgroundColor: '#32b9cd8f',
-                    fill: true,
-                    data: []
-                }
             ]
         };
+        console.log('dados.labels')
+        console.log(dados.labels)
+        console.log('dados.datasets[0].data')
+        console.log(dados.datasets[0].data)
 
-        for (i = 0; i < resposta.length; i++) {
+        /* for (i = 0; i < resposta.length; i++) {
             var registro = resposta[i];
             dados.labels.push(registro.momento_grafico);
             dados.datasets[0].data.push(registro.umidade);
             dados.datasets[1].data.push(registro.temperatura);
-        }
+        }*/
 
         console.log(JSON.stringify(dados));
 
-        var ctx = canvas_grafico.getContext('2d');
-        window.grafico_linha = Chart.Line(ctx, {
+        var divdoMomento = document.getElementById(idDiv)
+        var ctx = grafico_1.getContext('2d');
+        window.divdoMomento= Chart.Bar(ctx, {
             data: dados,
             options: {
                 responsive: true,
                 animation: { duration: 500 },
                 hoverMode: 'index',
-                stacked: false,
+                stacked: true,
                 title: {
-                    display: false,
+                    display: true,
                     text: 'Dados capturados'
                 },
                 scales: {
@@ -626,9 +624,8 @@ function registrarRespostas(idResposta) {
                 }
             }
         });
-
-        setTimeout(() => atualizarGrafico(idAquario, dados), 2000);
     }
+        /* setTimeout(() => atualizarGrafico(idAquario, dados), 2000); */
 
 
     // Esta função *atualizarGrafico* atualiza o gráfico que foi renderizado na página,
@@ -636,7 +633,7 @@ function registrarRespostas(idResposta) {
 
     //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
     //     Para ajustar o "select", ajuste o comando sql em src/models
-    function atualizarGrafico(idAquario, dados) {
+    /* function atualizarGrafico(idAquario, dados) {
 
         fetch(`/medidas/tempo-real/${idAquario}`, { cache: 'no-store' }).then(function (response) {
             if (response.ok) {
@@ -669,6 +666,14 @@ function registrarRespostas(idResposta) {
             .catch(function (error) {
                 console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
             });
-
-    }
+ */
+    
 </script>
+
+<!-- <script>
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+  </script> -->
+  
