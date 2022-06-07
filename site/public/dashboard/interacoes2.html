@@ -68,10 +68,11 @@
 
                 <div class="enqUnica">
                     <div class="divPerguntaUnica1">
-                        <h4 class="perguntaUnica1"> Você é daqueles que acordam com música, tomam banho escutando,
+                        <h3 class="tituloPergunta">Antes de responder as enquetes, responda pra gente uma perguntinha básica:</h3>
+                        <p class="perguntaUnica1"> &nbsp; Você é daqueles que acordam com música, tomam banho escutando,
                             cantam no metrô, enquanto lavam a louça ou em qualquer outra situação da vida? O dia todo
-                            todo dia? <br> Escreva aqui quanto tempo você costuma passar escutando bons sons.
-                        </h4>
+                            todo dia? <br> &nbsp; Escreva aqui quanto tempo você costuma passar escutando Música!
+                        </p>
                         <input placeholder="Em minutos" id="inTempo" class="inTempo" onkeyup="horas()"> <br>
                         <div id="divResultadoEnqUnica"></div>
                     </div>
@@ -235,21 +236,21 @@
                     </canvas>
                 </div>
                 <div class="grafico1">
-                    <canvas id="grafico1">
+                    <canvas id="grafico2">
                     </canvas>
                 </div>
                 <div class="grafico1">
-                    <canvas id="grafico1">
+                    <canvas id="grafico3">
                     </canvas>
                 </div>
             </div>
             <div class="divGraficos2">
                 <div class="grafico2">
-                    <canvas id="grafico1">
+                    <canvas id="grafico4">
                     </canvas>
                 </div>
                 <div class="grafico2">
-                    <canvas id="grafico1">
+                    <canvas id="grafico5">
                     </canvas>
                 </div>
             </div>
@@ -309,10 +310,10 @@
         let minutos = Number(inTempo.value)
         let calculo = Number(minutos / 60)
         let menorqueZero = calculo <= 0
-        let poucosMinutos = calculo > 0 && calculo <= 1
+        let poucosMinutos = calculo > 0 && calculo <= 2
         let bastanteMinutos = calculo > 2 && calculo
-            < 3
-        let muitosMinutos = calculo > 4
+            < 4
+        let muitosMinutos = calculo > 5
         if (menorqueZero) {
             divResultadoEnqUnica.innerHTML = `Opa, pera lá, não dá pra ter escutado zero minutos de música!`
         } else {
@@ -320,7 +321,7 @@
                 divResultadoEnqUnica.innerHTML = `Você escuta ${Number(parseInt(calculo))} horas por dia, não chega nem a ser 1 hora. Pelo visto você não é um ouvinte tão assíduo, né?!`
             }
             if (bastanteMinutos) {
-                divResultadoEnqUnica.innerHTML = `Você escuta ${Number(parseInt(calculo))} horas por dia. Esse aí gosta de aproveitar pelo menos umas 2h de música no dia!`
+                divResultadoEnqUnica.innerHTML = `Você escuta ${Number(parseInt(calculo))} horas por dia. Até que você curte bastante, hein!`
             }
             if (muitosMinutos) {
                 divResultadoEnqUnica.innerHTML = `Você escuta ${Number(parseInt(calculo))} horas por dia. Você é igualzinho ao exemplo, né?! Daqueles que ouvem música o tempo todo!`
@@ -430,7 +431,7 @@
                         var btnDeletar = document.createElement("button");
 
 
-                        spanID.innerHTML = "ID: <b>" + publicacao.idAviso + "</b>";
+                        spanID.innerHTML = "ID DO POST: <b>" + publicacao.idAviso + "</b>";
                         spanNome.innerHTML = "Autor: <b>" + publicacao.nome + "</b>";
                         divDescricao.innerHTML = "Descrição: <b>" + publicacao.descricao + "</b>";
                         btnEditar.innerHTML = "Editar";
@@ -508,7 +509,28 @@
             clearTimeout(proximaAtualizacao);
         }
 
-        fetch(`/enquetes/resposta/${idEnq}`, { cache: 'no-store' }).then(function (response) {
+        /*BODY DA REQUISIÇÃO {
+	idUsuario: USUARIO_LOGADO (que está no sessionStorage),
+	idEnquete: VALIDAR_ENQUETE_CLICADA (faz um if e coloca o valor de acordo, por exemplo, se cliquei no primeiro selecionar, passo o idEnquete 1)
+	resposta: VALOR_SELECIONADO_PELO_USUARIO (o que você está exibindo no alerta atualmente)
+}*/
+        
+function registrarRespostas(idResposta) {
+    
+    fetch("/respostas/registrarRespostas", {
+        method: "POST",
+        headers: {
+                "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            idUsuario: sessionStorage.USUARIO_LOGADO,
+            idEnq: VALIDAR_ENQUETE_CLICADA,
+            resposta: VALOR_SELECIONADO_PELO_USUARIO
+        })
+    })
+    
+}
+        /* fetch(`/enquetes/resposta/${idEnq}`, { cache: 'no-store' }).then(function (response) {
             if (response.ok) {
                 response.json().then(function (resposta) {
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
@@ -522,8 +544,9 @@
         })
             .catch(function (error) {
                 console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-            });
+            }); */
     }
+    
 
     // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
     // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
