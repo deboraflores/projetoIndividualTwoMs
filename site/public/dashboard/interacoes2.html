@@ -60,6 +60,7 @@
                 <h2 class="tituloPosts">Publicações antigas</h2>
                 <div id="feedContainer" class="feedContainer">
                 </div>
+                <div id="publicacao"></div>
             </div>
         </div>
 
@@ -145,7 +146,6 @@
                 </div>
 
                 <div class="enq2">
-                    <button onclick="funcaoPreenchendoTudo()">funcao</button>
                     <div class="imgPerguntaEnq2">
                         <h4 class="perguntaEnq2">O que estaria no seu fone, caso você estivesse: </h4>
                         <img class="imgEnq2"
@@ -333,7 +333,7 @@
         }
     }
 
-
+    window.onload = atualizarFeed();
     function publicar() {
         var idUsuario = sessionStorage.ID_USUARIO;
         var corpo = {
