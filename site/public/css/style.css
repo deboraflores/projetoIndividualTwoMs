@@ -458,7 +458,7 @@ li:hover {
 .divPostsAntigos {
     background-color: #663399;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     margin-top: 13%;
     margin-bottom: 5%;
     display: flex;
@@ -783,30 +783,34 @@ li {
 /*gráficos*/
     .divGraficos {
         width: 70%;
-        height: 50vh;
-        margin-left: 15%;
-        background-color: #663399;
+        height: 70vh;
         display: flex;
+        flex-direction: column;
     }
-    .grafico1 {
-        height:30vh; 
-        width:20vw;
-        background-color: antiquewhite;
-        margin: 2%;
-        padding-top: 5%;
-        display: flex;
-        flex-direction: row;
-    }
-    .divGraficos2 {
+    .divBtns {
         width: 70%;
-        height: 50vh;
-        margin-top: 1%;
-        margin-left: 15%;
+        height: 10%;
+        margin-left: 25%;
+        align-items: center;
+        gap: 10px;
+    }
+    .btnResultados {
         background-color: #663399;
-        display: flex;
+        border-radius: 10%;
+        width: 15%;
+        height: 70%;
+        margin-left: 3%;
+        transition: all 1s;
+       }
+    .btnResultados:hover {
+        transform: scale(1.05);
+    }
+    #graficos {
+        background-color: rgba(241, 232, 219, 0.708);
+        margin-left: 27%;
     }
 
-    .grafico2 {
+    /* .grafico2 {
         height:30vh; 
         width:20vw;
         background-color: antiquewhite;
@@ -814,7 +818,7 @@ li {
         margin-top: 3%;
         padding-top: 5%;
         display: flex;
-    }
+    } */
 
 .enqUnica {
     display: flex;

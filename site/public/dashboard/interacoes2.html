@@ -234,30 +234,18 @@
                 Comunidade. </h4>
 
             <div class="divGraficos">
-                <div class="grafico1">
-                    <canvas id="grafico_1">
-                    </canvas>
+                <div class="divBtns">
+                    <button class="btnResultados" onclick="obterDadosVotacao(1)">Enquete 1</button>
+                    <button class="btnResultados" onclick="obterDadosVotacao(2)">Enquete 2</button>
+                    <button class="btnResultados" onclick="obterDadosVotacao(3)">Enquete 3</button>
+                    <button class="btnResultados" onclick="obterDadosVotacao(4)">Enquete 4</button>
+                    <button class="btnResultados" onclick="obterDadosVotacao(5)">Enquete 5</button>
                 </div>
-                <div class="grafico1">
-                    <canvas id="grafico2">
-                    </canvas>
-                </div>
-                <div class="grafico1">
-                    <canvas id="grafico3">
-                    </canvas>
-                </div>
-            </div>
-            <div class="divGraficos2">
-                <div class="grafico2">
-                    <canvas id="grafico4">
-                    </canvas>
-                </div>
-                <div class="grafico2">
-                    <canvas id="grafico5">
+                <div class="divCanvas">
+                    <canvas id="graficos" style="width:20%; height:50% ;">
                     </canvas>
                 </div>
             </div>
-        </div>
     </div>
 
 </body>
@@ -477,15 +465,15 @@
         return false;
     }
 
-    window.onload = funcaoPreenchendoTudo();
+    /* window.onload = funcaoPreenchendoTudo();
     function funcaoPreenchendoTudo () {
         obterDadosVotacao(1,grafico_1)
-        /* obterDadosVotacao(2,grafico2)
+        obterDadosVotacao(2,grafico2)
         obterDadosVotacao(3,grafico3)
         obterDadosVotacao(4,grafico4)
-        obterDadosVotacao(5,grafico5) */
+        obterDadosVotacao(5,grafico5) 
+    } */
 
-    }
     // O gráfico é construído com três funções:
     // 1. obterDadosGrafico -> Traz dados do Banco de Dados para montar o gráfico da primeira vez
     // 2. plotarGrafico -> Monta o gráfico com os dados trazidos e exibe em tela
@@ -582,7 +570,7 @@
         console.log(JSON.stringify(dados));
 
         var divdoMomento = document.getElementById(idDiv);
-        var ctx = grafico_1.getContext('2d');
+        var ctx = graficos.getContext('2d');
         window.grafico_linha = Chart.Bar(ctx, {
             data: dados,
             options: {
@@ -602,7 +590,7 @@
                         id: 'y-enquetes',
                         ticks: {
                             beginAtZero: true,
-                            max: 30,
+                            max: 20,
                             min: 0
                         }
                     }, {
