@@ -7,7 +7,7 @@
     <title>TwoM's - Cadastro </title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="./assets/icon/fav.png">
-    <script src="../js/funcoes.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <div class="header">
@@ -64,9 +64,26 @@
         var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
         if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-            
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Preencha todos os campos, amigo!',
+        })
             return false;
+        } else if (emailVar.indexOf('@') == [-1] || emailVar.indexOf('.com') == [-1]) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Seu e-mail está inválido, amigo!',
+        })
+            return false;
+        } else if (confirmacaoSenhaVar != senhaVar) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Tem algo de errado nessas senhas!',
+        })
+        return false;
         }
 
         // Enviando o valor da nova input
@@ -89,13 +106,13 @@
             console.log("resposta: ", resposta);
 
             if (resposta.ok) {
-                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Vamos logar!";
+                alert (`Cadastro realizado com sucesso! Vamos logar!`);
                 setTimeout(() => {
                     window.location = "login.html";
                 }, "2000")
                 
             } else {
-                throw ("Houve um erro ao tentar realizar o cadastro!");
+                throw (`Houve um erro ao tentar realizar o cadastro!`);
             }
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);

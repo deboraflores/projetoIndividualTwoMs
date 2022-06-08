@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="../assets/icon/fav.png">
     <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -246,7 +248,7 @@
                     </canvas>
                 </div>
             </div>
-    </div>
+        </div>
 
 </body>
 
@@ -322,6 +324,8 @@
     }
 
     window.onload = atualizarFeed();
+    
+    
     function publicar() {
         var idUsuario = sessionStorage.ID_USUARIO;
         var corpo = {
@@ -474,50 +478,55 @@
         obterDadosVotacao(5,grafico5) 
     } */
 
-    // O gráfico é construído com três funções:
-    // 1. obterDadosGrafico -> Traz dados do Banco de Dados para montar o gráfico da primeira vez
-    // 2. plotarGrafico -> Monta o gráfico com os dados trazidos e exibe em tela
-    // 3. atualizarGrafico -> Atualiza o gráfico, trazendo novamente dados do Banco
+/* O gráfico é construído com três funções:
+1. obterDadosGrafico -> Traz dados do Banco de Dados para montar o gráfico da primeira vez
+2. plotarGrafico -> Monta o gráfico com os dados trazidos e exibe em tela
+3. atualizarGrafico -> Atualiza o gráfico, trazendo novamente dados do Banco
 
-    // Esta função *obterDadosGrafico* busca os últimos dados inseridos em tabela de medidas.
-    // para, quando carregar o gráfico da primeira vez, já trazer com vários dados.
-    // A função *obterDadosGrafico* também invoca a função *plotarGrafico*
+Esta função *obterDadosGrafico* busca os últimos dados inseridos em tabela de medidaspara, quando carregar o gráfico da primeira vez, já trazer com vários dados.
+A função *obterDadosGrafico* também invoca a função *plotarGrafico*
 
-    //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
-    //     Para ajustar o "select", ajuste o comando sql em src/models
+Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
+Para ajustar o "select", ajuste o comando sql em src/models */
+    
     var idUsuario = sessionStorage.ID_USUARIO
-        function selecionarNovo(pergunta, resposta) {
-            alert(`Na pergunta ${pergunta}, você respondeu ${resposta}.`)
+    
+    function selecionarNovo(pergunta, resposta) {
+        /* alert(`Na pergunta ${pergunta}, você respondeu ${resposta}.`) */
+                Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Seu voto na enquete foi computado!',
+            showConfirmButton: false,
+            timer: 1500
+        })
+      
+        fetch(`/usuarios/selecionar/${resposta}/${idUsuario}/${pergunta}`, {
+            method: "POST"
+            /* headers: {
+                    "Content-Type": "application/json"
+            } */
+            /* body: JSON.stringify({
+                idUsuarioServer : idUsuario,
+                idEnqServer:  VALIDAR_ENQUETE_CLICADA, // como que eu chamo o parâmetro?
+                resposta: VALOR_SELECIONADO_PELO_USUARIO
+            }) */
+        })
+            .catch(function (error) {
+                console.log(`Erro: ${error.message}`)
+            });
 
-            /* idUsuarioServer:idUsuario;
-            sessionStorage.RESPOSTA = json.resposta;
-         */
-            fetch(`/usuarios/selecionar/${resposta}/${idUsuario}/${pergunta}`, {
-                method: "POST"
-                /* headers: {
-                        "Content-Type": "application/json"
-                } */
-                /* body: JSON.stringify({
-                    idUsuarioServer : idUsuario,
-                    idEnqServer:  VALIDAR_ENQUETE_CLICADA, // como que eu chamo o parâmetro?
-                    resposta: VALOR_SELECIONADO_PELO_USUARIO
-                }) */
-            })
-                .catch(function (error) {
-                    console.log(`Erro: ${error.message}`)
-                });
+    }
 
-        }
-    
-    
-    
-    
-    function obterDadosVotacao(idEnq,idDiv) {
+
+
+
+    function obterDadosVotacao(idEnq, idDiv) {
 
         /* if (proximaAtualizacao != undefined) {
             clearTimeout(proximaAtualizacao);
         } */
-        
+
         fetch(`/usuarios/resultadoVotacao/${idEnq}`, { cache: 'no-store' }).then(function (response) {
             if (response.ok) {
                 response.json().then(function (resposta) {
@@ -539,7 +548,7 @@
     // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
     // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
     // A função *plotarGrafico* também invoca a função *atualizarGrafico*
-    function plotarGrafico(resposta, idDiv ) {
+    function plotarGrafico(resposta, idDiv) {
         console.log('iniciando plotagem do gráfico...');
         console.log('resposta')
         console.log(resposta)
@@ -552,7 +561,7 @@
                     borderColor: '#2B4D1A',
                     backgroundColor: '#2B4D1A',
                     fill: true,
-                    data:[/* resposta.RespostaMusica1, resposta.RespostaMusica2 */]
+                    data: [/* resposta.RespostaMusica1, resposta.RespostaMusica2 */]
                 },
             ]
         };
@@ -562,10 +571,10 @@
         console.log(dados.datasets[0].data)
 
         for (i = 0; i < resposta.length; i++) {
-          var registro = resposta[i];
-          dados.datasets[0].data.push(registro.RespostaMusica1);
-          dados.datasets[0].data.push(registro.RespostaMusica2);
-      }
+            var registro = resposta[i];
+            dados.datasets[0].data.push(registro.RespostaMusica1);
+            dados.datasets[0].data.push(registro.RespostaMusica2);
+        }
 
         console.log(JSON.stringify(dados));
 
@@ -612,12 +621,12 @@
             }
         });
     }
-    
+
     /* setTimeout(() => atualizarGrafico(idAquario, dados), 2000); */
 
 
     // Esta função *atualizarGrafico* atualiza o gráfico que foi renderizado na página,
-    // buscando a última medida inserida em tabela contendo as capturas, 
+    // buscando a última medida inserida em tabela contendo as capturas,
 
     //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
     //     Para ajustar o "select", ajuste o comando sql em src/models
@@ -655,13 +664,5 @@
                 console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
             });
  */
-    
-</script>
 
-<!-- <script>
-    const myChart = new Chart(
-      document.getElementById('myChart'),
-      config
-    );
-  </script> -->
-  
+</script>

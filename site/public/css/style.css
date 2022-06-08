@@ -8,22 +8,25 @@ body {
     width: 100%;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
-    background-color:#2D4B1A;
+    background-color: #2D4B1A;
     overflow-x: hidden;
     cursor: pointer;
 }
+
 .header {
-     width: 100%;
-     height: 25%;
+    width: 100%;
+    height: 25%;
 }
+
 .container {
     background-color: #2D4B1A;
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     border-bottom: #663399 4px solid;
 }
+
 .divLogo {
     width: 40%;
     height: 10%;
@@ -32,6 +35,7 @@ body {
     display: flex;
     cursor: pointer;
 }
+
 .logo1 {
     width: 20%;
     height: 30%;
@@ -39,25 +43,30 @@ body {
     transition: all;
     transition-duration: 1s;
 }
+
 .logo1:hover {
     -webkit-transform: rotateZ(-30deg);
     -ms-transform: rotateZ(-30deg);
     transform: rotateZ(-30deg);
 }
+
 .nomeProjeto {
     width: fit-content;
     padding-left: 2%;
     color: white;
 }
+
 .nomeProjeto:hover {
-    transition:all 2s ease-in; 
+    transition: all 2s ease-in;
     color: antiquewhite;
     font-size: 40px;
     font-weight: 800;
 }
+
 .header .container {
     justify-content: space-between;
 }
+
 .navbarHome {
     color: white;
     display: flex;
@@ -76,9 +85,11 @@ li a {
     margin-right: 2%;
     font-size: 18px;
 }
+
 a {
     cursor: pointer;
 }
+
 a:hover {
     color: antiquewhite;
     text-decoration: underline;
@@ -91,38 +102,46 @@ a:hover {
     height: 100vh;
 
 }
+
 .bannerPrincipal {
     width: 100%;
     height: 100vh;
     display: flex;
 }
+
 .textoImgHome {
     width: 50%;
 }
+
 .titulo1 {
     font-size: 50px;
     padding-left: 8%;
 }
+
 .titulo1:hover {
     color: antiquewhite;
     text-decoration: solid;
 }
+
 h3 {
     padding-left: 8%;
 }
+
 .divImagem {
     width: 50%;
     height: 40%;
     padding-left: 10%;
     display: flex;
 }
+
 .img {
     width: 40vw;
     height: 40vh;
     padding-right: 5%;
 }
+
 .divSongsHome {
-    margin-top:10%;
+    margin-top: 10%;
     margin-left: 8%;
     padding-top: 1%;
     padding-left: 2%;
@@ -131,6 +150,7 @@ h3 {
     height: 35vh;
     border: #2D4B1A 3px solid;
 }
+
 .songsHome {
     width: 80%;
 }
@@ -141,7 +161,8 @@ h3 {
 .divPrincipalModa {
     background-color: #663399;
     margin-top: 1%;
-}   
+}
+
 .bannerModa {
     width: 90%;
     height: 100%;
@@ -150,19 +171,23 @@ h3 {
     padding-top: 3%;
     display: flex;
 }
+
 .tituloSobre {
     color: antiquewhite;
     text-decoration: underline;
 }
+
 .texto {
     text-align: left;
     width: 50%;
 }
+
 .divImagem2 {
     width: 50%
 }
+
 .img2 {
-    width:80% ;
+    width: 80%;
     margin-left: 15%;
 }
 
@@ -170,6 +195,7 @@ h3 {
     background-color: #663399;
     margin-top: 1%;
 }
+
 .bannerMusica {
     width: 90%;
     height: 100%;
@@ -178,47 +204,55 @@ h3 {
     padding-top: 3%;
     display: flex;
 }
+
 .texto {
     text-align: left;
     width: 50%;
 }
+
 .divImagem3 {
     width: 50%
 }
+
 .img3 {
-    width:80% ;
+    width: 80%;
     padding-left: 15%;
 }
 
 footer {
     color: white;
     width: 100%;
-    height:20%;
+    height: 20%;
     margin-top: 1%;
     background-color: #2D4B1A;
     border-top: #663399 4px solid;
     display: flex;
 }
+
 .contato {
     width: 35%;
-    height:20%;
+    height: 20%;
     margin-top: 1%;
     margin-left: 3%;
 }
+
 .tituloContato:hover {
     color: antiquewhite;
     text-decoration: dashed;
 }
+
 .textoContato {
     font-size: 20px;
     margin-left: 5%;
 }
+
 .textoFooter {
     color: white;
     font-size: 15px;
     font-weight: 800;
     margin: 5%;
 }
+
 .textoFooter:hover {
     color: antiquewhite;
     text-decoration: dashed;
@@ -236,14 +270,17 @@ footer {
     margin-top: 1%;
     margin-left: 3%;
 }
+
 .textoSobre {
     text-align: left;
 }
+
 .identidade {
     margin-top: 1%;
     width: 30%;
     height: 20%;
 }
+
 .logo2 {
     width: 40%;
     height: 30%;
@@ -252,11 +289,13 @@ footer {
     transition: all;
     transition-duration: 1s;
 }
+
 .logo2:hover {
     -webkit-transform: rotateZ(-30deg);
     -ms-transform: rotateZ(-30deg);
     transform: rotateZ(-30deg);
 }
+
 /*Cadastro.html*/
 
 .bannerCadastro {
@@ -267,13 +306,15 @@ footer {
     display: flex;
     margin-top: 2%;
 }
+
 #mensagem_erro {
     background-color: #2D4B1A;
-    color:white;
+    color: white;
     border: #663399 3px solid;
     margin-left: 3%;
     margin-top: 3%;
 }
+
 .divCadastro {
     margin-left: 20%;
     margin-top: 0;
@@ -307,28 +348,33 @@ footer {
     margin-top: 2%;
     display: flex;
     align-items: center;
-    
+
 }
+
 .divLogin {
     margin-left: 20%;
     margin-top: 0;
 }
+
 .imgForms {
     display: flex;
 }
+
 .divFormsLogin {
     width: 40%;
     height: 70%;
     padding-top: 3%;
     padding-bottom: 3%;
 }
+
 .inLogin {
     font-size: 15px;
     width: 50%;
-    height:10%;
+    height: 10%;
     border: #2D4B1A 2px solid;
     margin-top: 1%;
 }
+
 .btnLoginCadastro {
     font-size: 20px;
     color: white;
@@ -344,9 +390,11 @@ footer {
     width: 70%;
     height: 70%;
 }
+
 .textoCadastro {
     font-size: 20px;
 }
+
 .img5 {
     width: 40%;
     height: 80%;
@@ -364,17 +412,21 @@ footer {
     width: 40%;
     padding-right: 3%;
 }
+
 li {
     cursor: pointer;
 }
+
 li:hover {
     color: antiquewhite;
     text-decoration: underline;
 }
+
 .bannerInteracoes {
     width: 100%;
     height: 100%;
 }
+
 .selConta {
     font-family: 'Poppins';
     text-decoration: none;
@@ -384,10 +436,12 @@ li:hover {
     color: white;
     font-size: 18px;
 }
+
 .optConta {
-    color:#2D4B1A;
+    color: #2D4B1A;
     font-weight: 600;
 }
+
 .divOpcoes {
     width: 100%;
     height: 60%;
@@ -398,6 +452,7 @@ li:hover {
     justify-content: space-between;
 
 }
+
 .imgOpcoes {
     background-color: #663399;
     width: 300px;
@@ -407,9 +462,11 @@ li:hover {
     transition: all;
     transition-duration: 3s;
 }
+
 .imgOpcoes:hover {
     transform: scale(1.08);
 }
+
 .divPosts {
     background-color: #663399;
     width: 65%;
@@ -419,6 +476,7 @@ li:hover {
     margin-bottom: 5%;
     display: flex;
 }
+
 .tituloPosts {
     color: white;
     font-weight: 600;
@@ -426,25 +484,29 @@ li:hover {
     width: fit-content;
     height: 5%;
 }
+
 .tituloPosts:hover {
     color: antiquewhite;
     text-decoration: dashed;
 }
+
 .textoPosts {
     width: 100%;
     color: white;
     padding-left: 3%;
 }
+
 .textareaPost {
     width: 60%;
     height: 40vh;
     margin-left: 3%;
     font-size: 15px;
-    padding:1%;
+    padding: 1%;
     border: #2D4B1A 4px solid;
     resize: none;
 
 }
+
 .btnPublicar {
     width: 30%;
     height: 10%;
@@ -455,6 +517,7 @@ li:hover {
     font-weight: 600;
     border: #663399 2px solid;
 }
+
 .divPostsAntigos {
     background-color: #663399;
     width: 100%;
@@ -464,10 +527,11 @@ li:hover {
     display: flex;
     flex-direction: column;
 }
+
 #feedContainer {
     width: 80%;
     height: 100%;
-} 
+}
 
 /*css do acquatec */
 
@@ -479,33 +543,33 @@ li:hover {
     color: rgb(216, 216, 216);
     margin: 5%;
     margin-left: 8%;
-  }
-  
-  .dash-right .avisos .container {
+}
+
+.dash-right .avisos .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .dash-right .avisos .container .div-form {
+}
+
+.dash-right .avisos .container .div-form {
     width: 100%;
-  }
-  
-  .dash-right .avisos .container .div-form #form_postagem {
+}
+
+.dash-right .avisos .container .div-form #form_postagem {
     width: 100%;
-  }
-  
-  .dash-right .avisos .div-form label {
+}
+
+.dash-right .avisos .div-form label {
     width: 100%;
-  }
-  
-  .dash-right .avisos .div-form input {
+}
+
+.dash-right .avisos .div-form input {
     width: 100%;
     border-radius: 5px;
-  }
-  
-  
-  .dash-right .avisos .div-form button {
+}
+
+
+.dash-right .avisos .div-form button {
     border: 0;
     border-radius: 5px;
     font-weight: 600;
@@ -515,9 +579,9 @@ li:hover {
     background-color: #663399;
     width: 120px;
     margin-left: 20%;
-  }
-  
-  .publicacao-btn-editar {
+}
+
+.publicacao-btn-editar {
     border: 0;
     margin: 5%;
     font-size: 14px;
@@ -526,14 +590,15 @@ li:hover {
     background-color: #663399;
     width: 80px;
     height: 30px;
-  }
-  .publicacao-btn-editar:hover {
+}
+
+.publicacao-btn-editar:hover {
     background-color: white;
     color: #663399;
-    transition:all 1s ease-in 
+    transition: all 1s ease-in
 }
-  
-  .publicacao {
+
+.publicacao {
     display: flex;
     font-family: 'Poppins', sans-serif;
     flex-wrap: wrap;
@@ -551,33 +616,34 @@ li:hover {
     transition: all;
     transition-duration: 1s;
     border-radius: 50px;
-  }
-  .publicacao:hover {
-      transform: scale(1.05)
-  }
-  
-  .publicacao > *:not(:last-child) {
+}
+
+.publicacao:hover {
+    transform: scale(1.05)
+}
+
+.publicacao>*:not(:last-child) {
     padding: 0 0 10px 0;
-  }
-  
-  .div-results {
+}
+
+.div-results {
     width: 100%;
-  }
-  
-  .div-results .feed-container {
+}
+
+.div-results .feed-container {
     background-color: #212124;
     border-radius: 5px;
     margin-bottom: 80px;
-  }
-  
-  .div-buttons {
+}
+
+.div-buttons {
     display: flex;
     justify-content: flex-end;
-  }
-  
-  .div-buttons > * {
+}
+
+.div-buttons>* {
     margin-left: 30px;
-  }
+}
 
 /*ENQUETES*/
 .bannerEnq {
@@ -585,23 +651,27 @@ li:hover {
     height: 100%;
     display: flex;
 }
-#divEnqResultado { 
+
+#divEnqResultado {
     width: 100vw;
     height: 100%;
     margin-top: 1%;
     margin-bottom: 5%;
-    display: inline-block;    
+    display: inline-block;
 }
+
 .tituloEnq {
     color: white;
     font-weight: 600;
     padding-left: 15%;
     cursor: pointer;
 }
+
 .tituloEnq:hover {
-    color:antiquewhite;
-    text-decoration:underline;
+    color: antiquewhite;
+    text-decoration: underline;
 }
+
 .enq1 {
     display: flex;
     color: white;
@@ -613,17 +683,20 @@ li:hover {
     margin-left: 18%;
     margin-bottom: 5%;
 }
+
 .imgPerguntaEnq1 {
     display: flex;
     flex-direction: column;
     padding: 2%;
 }
+
 .imgEnq1 {
     height: 55vh;
     width: 65%;
     padding-top: 3%;
     padding-left: 14%;
 }
+
 .perguntaEnq1 {
     width: 100%;
     height: 5%;
@@ -631,6 +704,7 @@ li:hover {
     padding-left: 2%;
     margin-top: 2%;
 }
+
 .opcoesEnq1 {
     width: 50%;
     margin-top: 3%;
@@ -638,17 +712,20 @@ li:hover {
     display: flex;
     flex-direction: column;
 }
+
 .songs {
     padding: 3%;
     width: 60%;
     flex-direction: column;
-    
+
 }
+
 .musica1 {
     display: flex;
     flex-direction: column;
     border: #2D4B1A 4px;
 }
+
 .nomeMusica {
     padding-left: 5%;
     margin-top: 0;
@@ -657,9 +734,11 @@ li:hover {
     transition: all;
     transition-duration: 1s;
 }
+
 .nomeMusica:hover {
     transform: scale(1.05);
-} 
+}
+
 .btnSelecionar {
     width: fit-content;
     height: 30%;
@@ -670,15 +749,17 @@ li:hover {
     background-color: #2D4B1A;
     margin-top: 2%;
 }
+
 .btnSelecionar:hover {
     background-color: white;
     color: #663399;
-    transition:all 1s ease-in 
+    transition: all 1s ease-in
 }
+
 .enq2 {
     display: flex;
     color: white;
-    border:#663399 8px ridge;
+    border: #663399 8px ridge;
     background-color: #663399;
     width: 65%;
     height: 70vh;
@@ -686,17 +767,20 @@ li:hover {
     margin-left: 18%;
     margin-bottom: 5%;
 }
+
 .imgPerguntaEnq2 {
     display: flex;
     flex-direction: column;
     padding: 2%;
 }
+
 .imgEnq2 {
     height: 55vh;
     width: 65%;
     padding-top: 3%;
     padding-left: 14%;
 }
+
 .perguntaEnq2 {
     width: 100%;
     height: 5%;
@@ -704,6 +788,7 @@ li:hover {
     padding-left: 2%;
     margin-top: 2%;
 }
+
 .opcoesEnq2 {
     width: 50%;
     margin-top: 1%;
@@ -711,17 +796,20 @@ li:hover {
     display: flex;
     flex-direction: column;
 }
+
 .songs2 {
     padding: 3%;
     width: 60%;
     flex-direction: column;
-    
+
 }
+
 .musica2 {
     display: flex;
     flex-direction: column;
     border: #2D4B1A 4px;
 }
+
 .nomeMusica2 {
     padding-left: 5%;
     margin-top: 0;
@@ -730,9 +818,11 @@ li:hover {
     transition: all;
     transition-duration: 1s;
 }
+
 .nomeMusica2:hover {
     transform: scale(1.05);
 }
+
 .btnSelecionar {
     width: fit-content;
     height: 30%;
@@ -743,10 +833,11 @@ li:hover {
     background-color: #2D4B1A;
     margin-top: 1%;
 }
+
 .btnSelecionar:hover {
     background-color: white;
     color: #663399;
-    transition:all 1s ease-in 
+    transition: all 1s ease-in
 }
 
 li {
@@ -758,7 +849,7 @@ li {
     height: 100%;
     margin-top: 1%;
     margin-bottom: 5%;
-    display: inline-block; 
+    display: inline-block;
 }
 
 /*resultados*/
@@ -769,48 +860,54 @@ li {
     width: fit-content;
     height: 5%;
 }
-.tituloResults:hover {
-    color:antiquewhite;
-    text-decoration:underline;
-}
-.textoResults {
-        width: 70%;
-        color: white;
-        padding-left: 15%;
-        font-size: 20px;
-}
-    
-/*gráficos*/
-    .divGraficos {
-        width: 70%;
-        height: 70vh;
-        display: flex;
-        flex-direction: column;
-    }
-    .divBtns {
-        width: 70%;
-        height: 10%;
-        margin-left: 25%;
-        align-items: center;
-        gap: 10px;
-    }
-    .btnResultados {
-        background-color: #663399;
-        border-radius: 10%;
-        width: 15%;
-        height: 70%;
-        margin-left: 3%;
-        transition: all 1s;
-       }
-    .btnResultados:hover {
-        transform: scale(1.05);
-    }
-    #graficos {
-        background-color: rgba(241, 232, 219, 0.708);
-        margin-left: 27%;
-    }
 
-    /* .grafico2 {
+.tituloResults:hover {
+    color: antiquewhite;
+    text-decoration: underline;
+}
+
+.textoResults {
+    width: 70%;
+    color: white;
+    padding-left: 15%;
+    font-size: 20px;
+}
+
+/*gráficos*/
+.divGraficos {
+    width: 70%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.divBtns {
+    width: 70%;
+    height: 10%;
+    margin-left: 25%;
+    align-items: center;
+    gap: 10px;
+}
+
+.btnResultados {
+    background-color: #663399;
+    border-radius: 10%;
+    width: 15%;
+    height: 70%;
+    margin-left: 3%;
+    transition: all 1s;
+}
+
+.btnResultados:hover {
+    transform: scale(1.05);
+}
+
+#graficos {
+    background-color: rgba(241, 232, 219, 0.708);
+    margin-left: 27%;
+}
+
+/* .grafico2 {
         height:30vh; 
         width:20vw;
         background-color: antiquewhite;
@@ -831,6 +928,7 @@ li {
     margin-left: 18%;
     margin-bottom: 2%;
 }
+
 .divPerguntaUnica1 {
     width: 100%;
 }
@@ -839,20 +937,24 @@ li {
     width: 80%;
     padding-left: 10%;
 }
+
 .inTempo {
     font-size: 15px;
     width: 30%;
-    height:8%;
+    height: 8%;
     border: #2D4B1A 2px solid;
     margin-left: 10%;
 }
+
 #divResultadoEnqUnica {
     padding: 5%;
     width: 100%;
 }
+
 .divPerguntaUnica2 {
     width: 50%;
 }
+
 .perguntaUnica2 {
     width: 100%;
 }
@@ -860,7 +962,7 @@ li {
 .inTempo2 {
     font-size: 15px;
     width: 30%;
-    height:8%;
+    height: 8%;
     border: #2D4B1A 2px solid;
     margin-left: 5%;
 }

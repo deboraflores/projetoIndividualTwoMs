@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="../js/funcoes.js"></script>
     <link rel="icon" href="./assets/icon/fav.png">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <div class="header">
@@ -55,7 +56,11 @@
         var senhaVar = senha_input.value;
 
         if (emailVar == "" || senhaVar == "") {
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Preencha todos os campos, amigo!',
+        })
             
             setTimeout(function () {
                 ;
