@@ -7,9 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TwoM's - Comunidade</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="icon" href="./assets/icon/fav.png">
+    <link rel="icon" href="../assets/icon/fav.png">
     <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -146,6 +145,7 @@
                 </div>
 
                 <div class="enq2">
+                    <button onclick="funcaoPreenchendoTudo()">funcao</button>
                     <div class="imgPerguntaEnq2">
                         <h4 class="perguntaEnq2">O que estaria no seu fone, caso você estivesse: </h4>
                         <img class="imgEnq2"
@@ -480,10 +480,10 @@
     window.onload = funcaoPreenchendoTudo();
     function funcaoPreenchendoTudo () {
         obterDadosVotacao(1,grafico_1)
-        obterDadosVotacao(2,grafico2)
+        /* obterDadosVotacao(2,grafico2)
         obterDadosVotacao(3,grafico3)
         obterDadosVotacao(4,grafico4)
-        obterDadosVotacao(5,grafico5)
+        obterDadosVotacao(5,grafico5) */
 
     }
     // O gráfico é construído com três funções:
@@ -559,12 +559,12 @@
             labels: ['Votos na Música1', 'Votos na Música2'],
             datasets: [
                 {
-                    yAxisID: 'Enquetes',
-                    label: 'Resposta',
-                    borderColor: '#663399',
-                    backgroundColor: '#2D4B1A',
+                    yAxisID: 'y-enquetes',
+                    label: 'Qtde de Respostas',
+                    borderColor: '#2B4D1A',
+                    backgroundColor: '#2B4D1A',
                     fill: true,
-                    data: [resposta.RespostaMusica1, resposta.RespostaMusica2]
+                    data:[/* resposta.RespostaMusica1, resposta.RespostaMusica2 */]
                 },
             ]
         };
@@ -573,18 +573,17 @@
         console.log('dados.datasets[0].data')
         console.log(dados.datasets[0].data)
 
-        /* for (i = 0; i < resposta.length; i++) {
-            var registro = resposta[i];
-            dados.labels.push(registro.momento_grafico);
-            dados.datasets[0].data.push(registro.umidade);
-            dados.datasets[1].data.push(registro.temperatura);
-        }*/
+        for (i = 0; i < resposta.length; i++) {
+          var registro = resposta[i];
+          dados.datasets[0].data.push(registro.RespostaMusica1);
+          dados.datasets[0].data.push(registro.RespostaMusica2);
+      }
 
         console.log(JSON.stringify(dados));
 
-        var divdoMomento = document.getElementById(idDiv)
+        var divdoMomento = document.getElementById(idDiv);
         var ctx = grafico_1.getContext('2d');
-        window.divdoMomento= Chart.Bar(ctx, {
+        window.grafico_linha = Chart.Bar(ctx, {
             data: dados,
             options: {
                 responsive: true,
@@ -600,10 +599,10 @@
                         type: 'linear',
                         display: true,
                         position: 'left',
-                        id: 'y-temperatura',
+                        id: 'y-enquetes',
                         ticks: {
                             beginAtZero: true,
-                            max: 100,
+                            max: 30,
                             min: 0
                         }
                     }, {
@@ -625,7 +624,8 @@
             }
         });
     }
-        /* setTimeout(() => atualizarGrafico(idAquario, dados), 2000); */
+    
+    /* setTimeout(() => atualizarGrafico(idAquario, dados), 2000); */
 
 
     // Esta função *atualizarGrafico* atualiza o gráfico que foi renderizado na página,
